@@ -15,6 +15,7 @@
 		E7CA8F4A1EB9C31A008302A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */; };
 		E7CA8F551EB9C31A008302A7 /* fangMTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F541EB9C31A008302A7 /* fangMTTests.m */; };
 		E7CA8F601EB9C31A008302A7 /* fangMTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F5F1EB9C31A008302A7 /* fangMTUITests.m */; };
+		E856B18D2C30B2EC6F099C86 /* libPods-fangMT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038746DF1A0489567873FA93 /* libPods-fangMT.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038746DF1A0489567873FA93 /* libPods-fangMT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fangMT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.release.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.release.xcconfig"; sourceTree = "<group>"; };
+		73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.debug.xcconfig"; sourceTree = "<group>"; };
 		E7CA8F371EB9C31A008302A7 /* fangMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fangMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CA8F3B1EB9C31A008302A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7CA8F3D1EB9C31A008302A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E856B18D2C30B2EC6F099C86 /* libPods-fangMT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BE09A1C69EB6210D7BC5846 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				038746DF1A0489567873FA93 /* libPods-fangMT.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD2524975DC582A81E8A5B8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */,
+				28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E7CA8F2E1EB9C31A008302A7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				E7CA8F531EB9C31A008302A7 /* fangMTTests */,
 				E7CA8F5E1EB9C31A008302A7 /* fangMTUITests */,
 				E7CA8F381EB9C31A008302A7 /* Products */,
+				DD2524975DC582A81E8A5B8E /* Pods */,
+				1BE09A1C69EB6210D7BC5846 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7CA8F641EB9C31A008302A7 /* Build configuration list for PBXNativeTarget "fangMT" */;
 			buildPhases = (
+				16925789CB91EC3D73513997 /* [CP] Check Pods Manifest.lock */,
 				E7CA8F331EB9C31A008302A7 /* Sources */,
 				E7CA8F341EB9C31A008302A7 /* Frameworks */,
 				E7CA8F351EB9C31A008302A7 /* Resources */,
+				5D23AE4F3BD27228308749EF /* [CP] Embed Pods Frameworks */,
+				2302283EF7D0CB583C4EE387 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16925789CB91EC3D73513997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2302283EF7D0CB583C4EE387 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fangMT/Pods-fangMT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D23AE4F3BD27228308749EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fangMT/Pods-fangMT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7CA8F331EB9C31A008302A7 /* Sources */ = {
@@ -424,6 +499,7 @@
 		};
 		E7CA8F651EB9C31A008302A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = fangMT/Info.plist;
@@ -435,6 +511,7 @@
 		};
 		E7CA8F661EB9C31A008302A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = fangMT/Info.plist;
