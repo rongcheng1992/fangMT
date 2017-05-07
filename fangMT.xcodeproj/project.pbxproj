@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71F73EE1EBDEDB400947704 /* FilterConditionLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73ED1EBDEDB400947704 /* FilterConditionLineView.m */; };
+		E71F73F11EBEEDE500947704 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F01EBEEDE500947704 /* UIView+Border.m */; };
+		E71F73F41EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F31EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m */; };
+		E71F73F81EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F71EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.m */; };
+		E71F73FB1EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73FA1EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.m */; };
+		E78AFCAA1EBAD61A00A58889 /* MerchantInfoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCA91EBAD61A00A58889 /* MerchantInfoListModel.m */; };
+		E78AFCAD1EBAD63F00A58889 /* MerchantInfoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAC1EBAD63F00A58889 /* MerchantInfoListViewModel.m */; };
+		E78AFCB01EBAD9A500A58889 /* MerchantInfoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAF1EBAD9A500A58889 /* MerchantInfoListTableViewCell.m */; };
+		E78AFCB51EBBF00400A58889 /* HomePageTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCB41EBBF00400A58889 /* HomePageTableHeaderView.m */; };
+		E7AB3E7A1EBDE5C80028D948 /* FilterConditionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AB3E791EBDE5C80028D948 /* FilterConditionView.m */; };
 		E7CA8F3C1EB9C31A008302A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3B1EB9C31A008302A7 /* main.m */; };
 		E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */; };
-		E7CA8F421EB9C31A008302A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F411EB9C31A008302A7 /* ViewController.m */; };
+		E7CA8F421EB9C31A008302A7 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F411EB9C31A008302A7 /* HomePageViewController.m */; };
 		E7CA8F451EB9C31A008302A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F431EB9C31A008302A7 /* Main.storyboard */; };
 		E7CA8F471EB9C31A008302A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F461EB9C31A008302A7 /* Assets.xcassets */; };
 		E7CA8F4A1EB9C31A008302A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */; };
@@ -39,12 +49,33 @@
 		038746DF1A0489567873FA93 /* libPods-fangMT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fangMT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.release.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.release.xcconfig"; sourceTree = "<group>"; };
 		73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.debug.xcconfig"; sourceTree = "<group>"; };
+		E71F73EC1EBDEDB400947704 /* FilterConditionLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterConditionLineView.h; sourceTree = "<group>"; };
+		E71F73ED1EBDEDB400947704 /* FilterConditionLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterConditionLineView.m; sourceTree = "<group>"; };
+		E71F73EF1EBEEDE500947704 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
+		E71F73F01EBEEDE500947704 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		E71F73F21EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		E71F73F31EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		E71F73F61EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderCollectionViewCellViewModel.h; sourceTree = "<group>"; };
+		E71F73F71EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableHeaderCollectionViewCellViewModel.m; sourceTree = "<group>"; };
+		E71F73F91EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderCollectionViewCellModel.h; sourceTree = "<group>"; };
+		E71F73FA1EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableHeaderCollectionViewCellModel.m; sourceTree = "<group>"; };
+		E78AFCA81EBAD61A00A58889 /* MerchantInfoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoListModel.h; sourceTree = "<group>"; };
+		E78AFCA91EBAD61A00A58889 /* MerchantInfoListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoListModel.m; sourceTree = "<group>"; };
+		E78AFCAB1EBAD63F00A58889 /* MerchantInfoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoListViewModel.h; sourceTree = "<group>"; };
+		E78AFCAC1EBAD63F00A58889 /* MerchantInfoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoListViewModel.m; sourceTree = "<group>"; };
+		E78AFCAE1EBAD9A500A58889 /* MerchantInfoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoListTableViewCell.h; sourceTree = "<group>"; };
+		E78AFCAF1EBAD9A500A58889 /* MerchantInfoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoListTableViewCell.m; sourceTree = "<group>"; };
+		E78AFCB31EBBF00400A58889 /* HomePageTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderView.h; sourceTree = "<group>"; };
+		E78AFCB41EBBF00400A58889 /* HomePageTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableHeaderView.m; sourceTree = "<group>"; };
+		E7AB3E771EBC891F0028D948 /* CommonHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.pch; sourceTree = "<group>"; };
+		E7AB3E781EBDE5C80028D948 /* FilterConditionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterConditionView.h; sourceTree = "<group>"; };
+		E7AB3E791EBDE5C80028D948 /* FilterConditionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterConditionView.m; sourceTree = "<group>"; };
 		E7CA8F371EB9C31A008302A7 /* fangMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fangMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CA8F3B1EB9C31A008302A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7CA8F3D1EB9C31A008302A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7CA8F401EB9C31A008302A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E7CA8F411EB9C31A008302A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E7CA8F401EB9C31A008302A7 /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		E7CA8F411EB9C31A008302A7 /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		E7CA8F441EB9C31A008302A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7CA8F461EB9C31A008302A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CA8F491EB9C31A008302A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,9 +131,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E71F73EB1EBDED7500947704 /* FilerCondition */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB3E781EBDE5C80028D948 /* FilterConditionView.h */,
+				E7AB3E791EBDE5C80028D948 /* FilterConditionView.m */,
+				E71F73EC1EBDEDB400947704 /* FilterConditionLineView.h */,
+				E71F73ED1EBDEDB400947704 /* FilterConditionLineView.m */,
+				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
+				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
+			);
+			name = FilerCondition;
+			sourceTree = "<group>";
+		};
+		E71F73F51EBEFD5D00947704 /* TableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E78AFCB31EBBF00400A58889 /* HomePageTableHeaderView.h */,
+				E78AFCB41EBBF00400A58889 /* HomePageTableHeaderView.m */,
+				E71F73F21EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.h */,
+				E71F73F31EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m */,
+				E71F73F61EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.h */,
+				E71F73F71EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.m */,
+				E71F73F91EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.h */,
+				E71F73FA1EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.m */,
+			);
+			name = TableHeaderView;
+			sourceTree = "<group>";
+		};
+		E71F73FC1EBEFF1D00947704 /* MerchantInfoList */ = {
+			isa = PBXGroup;
+			children = (
+				E78AFCA81EBAD61A00A58889 /* MerchantInfoListModel.h */,
+				E78AFCA91EBAD61A00A58889 /* MerchantInfoListModel.m */,
+				E78AFCAB1EBAD63F00A58889 /* MerchantInfoListViewModel.h */,
+				E78AFCAC1EBAD63F00A58889 /* MerchantInfoListViewModel.m */,
+				E78AFCAE1EBAD9A500A58889 /* MerchantInfoListTableViewCell.h */,
+				E78AFCAF1EBAD9A500A58889 /* MerchantInfoListTableViewCell.m */,
+			);
+			name = MerchantInfoList;
+			sourceTree = "<group>";
+		};
 		E7CA8F2E1EB9C31A008302A7 = {
 			isa = PBXGroup;
 			children = (
+				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
 				E7CA8F391EB9C31A008302A7 /* fangMT */,
 				E7CA8F531EB9C31A008302A7 /* fangMTTests */,
 				E7CA8F5E1EB9C31A008302A7 /* fangMTUITests */,
@@ -127,12 +200,15 @@
 			children = (
 				E7CA8F3D1EB9C31A008302A7 /* AppDelegate.h */,
 				E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */,
-				E7CA8F401EB9C31A008302A7 /* ViewController.h */,
-				E7CA8F411EB9C31A008302A7 /* ViewController.m */,
+				E7CA8F401EB9C31A008302A7 /* HomePageViewController.h */,
+				E7CA8F411EB9C31A008302A7 /* HomePageViewController.m */,
 				E7CA8F431EB9C31A008302A7 /* Main.storyboard */,
 				E7CA8F461EB9C31A008302A7 /* Assets.xcassets */,
 				E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */,
 				E7CA8F4B1EB9C31A008302A7 /* Info.plist */,
+				E71F73F51EBEFD5D00947704 /* TableHeaderView */,
+				E71F73EB1EBDED7500947704 /* FilerCondition */,
+				E71F73FC1EBEFF1D00947704 /* MerchantInfoList */,
 				E7CA8F3A1EB9C31A008302A7 /* Supporting Files */,
 			);
 			path = fangMT;
@@ -348,9 +424,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CA8F421EB9C31A008302A7 /* ViewController.m in Sources */,
+				E7AB3E7A1EBDE5C80028D948 /* FilterConditionView.m in Sources */,
+				E78AFCB01EBAD9A500A58889 /* MerchantInfoListTableViewCell.m in Sources */,
+				E78AFCB51EBBF00400A58889 /* HomePageTableHeaderView.m in Sources */,
+				E7CA8F421EB9C31A008302A7 /* HomePageViewController.m in Sources */,
+				E71F73F41EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m in Sources */,
+				E71F73F81EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.m in Sources */,
+				E71F73FB1EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.m in Sources */,
+				E71F73EE1EBDEDB400947704 /* FilterConditionLineView.m in Sources */,
 				E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */,
+				E71F73F11EBEEDE500947704 /* UIView+Border.m in Sources */,
+				E78AFCAD1EBAD63F00A58889 /* MerchantInfoListViewModel.m in Sources */,
 				E7CA8F3C1EB9C31A008302A7 /* main.m in Sources */,
+				E78AFCAA1EBAD61A00A58889 /* MerchantInfoListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +588,7 @@
 			baseConfigurationReference = 73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/rong/Desktop/fangMT/CommonHeader.pch;
 				INFOPLIST_FILE = fangMT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cheng.fangMT;
@@ -514,6 +601,7 @@
 			baseConfigurationReference = 28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/rong/Desktop/fangMT/CommonHeader.pch;
 				INFOPLIST_FILE = fangMT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cheng.fangMT;
@@ -586,6 +674,7 @@
 				E7CA8F661EB9C31A008302A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7CA8F671EB9C31A008302A7 /* Build configuration list for PBXNativeTarget "fangMTTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +683,7 @@
 				E7CA8F691EB9C31A008302A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7CA8F6A1EB9C31A008302A7 /* Build configuration list for PBXNativeTarget "fangMTUITests" */ = {
 			isa = XCConfigurationList;
@@ -602,6 +692,7 @@
 				E7CA8F6C1EB9C31A008302A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
