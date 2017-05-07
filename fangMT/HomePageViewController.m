@@ -12,6 +12,8 @@
 #import "MerchantInfoListModel.h"
 #import "MerchantInfoListViewModel.h"
 #import "FilterConditionLineView.h"
+#import "MJChiBaoZiHeader.h"
+#import "MJChiBaoZiFooter.h"
 
 const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
@@ -35,7 +37,12 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     searchView.placeholder = @"输入商家名、品类或商圈";
     self.navigationItem.titleView = searchView;
 
-    [self.tableView registerClass:[MerchantInfoListTableViewCell class] forCellReuseIdentifier:kTableViewCellIdentifier];
+    
+    self.tableView.mj_header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    self.tableView.mj_footer = [MJChiBaoZiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+    
+    [_tableView registerClass:[MerchantInfoListTableViewCell class] forCellReuseIdentifier:kTableViewCellIdentifier];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.tableHeaderView = self.headerView;
@@ -52,6 +59,9 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
                                                          Failure:^(id obj) {
                                                              // 请求失败后可以在这里做一些事
                                                          }];
+    [self.tableView.mj_header beginRefreshing];
+    [self.tableView.mj_footer beginRefreshing];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -162,6 +172,32 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     //[cell ConfigCellWithMerchantInfoListModel:merchantInfoListModel];
     
     return cell;
+}
+
+#pragma mark -- helper methods
+
+- (void)loadMoreData {
+    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
+    __weak UITableView *tableView = self.tableView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 刷新表格
+        [tableView reloadData];
+        
+        // 拿到当前的上拉刷新控件，变为没有更多数据的状态
+        [tableView.mj_footer endRefreshing];
+    });
+}
+
+- (void)loadNewData {
+    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
+    __weak UITableView *tableView = self.tableView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 刷新表格
+        [tableView reloadData];
+        
+        // 拿到当前的下拉刷新控件，结束刷新状态
+        [tableView.mj_header endRefreshing];
+    });
 }
 
 @end
