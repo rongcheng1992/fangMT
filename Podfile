@@ -7,5 +7,6 @@ target :fangMT do
 	pod 'Masonry','1.0.2'
         pod 'SDWebImage','4.0.0'
         pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+        pod 'DOPDropDownMenu-Enhanced', '~> 1.0.0'
 end
 
