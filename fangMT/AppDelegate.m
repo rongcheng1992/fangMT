@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HomePageViewController.h"
+#import "UIImageView+WebCache.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,8 @@
     
     UIButton *locationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     locationButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    locationButton.backgroundColor = [UIColor redColor];
-    [locationButton setImage:[UIImage imageNamed:@"image"] forState:UIControlStateNormal];
+    
+    [locationButton setImage:[UIImage imageNamed:@"map"] forState:UIControlStateNormal];
     [locationButton addTarget:self action:@selector(didClicklocationButton) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *locationButtonItem = [[UIBarButtonItem alloc] initWithCustomView:locationButton];
     self.homePageViewController.navigationItem.rightBarButtonItem = locationButtonItem;

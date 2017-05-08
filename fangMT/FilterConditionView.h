@@ -22,8 +22,6 @@
 
 @property (nonatomic, weak) id<FilterConditionViewDelegate> delegate;
 
-- (instancetype)initWithConditionName:(NSString *)conditionName;
-
 - (void)configViewWithNameString:(NSString *)name;
 
 @end

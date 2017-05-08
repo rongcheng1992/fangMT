@@ -25,7 +25,6 @@
 		E7CA8F4A1EB9C31A008302A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */; };
 		E7CA8F551EB9C31A008302A7 /* fangMTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F541EB9C31A008302A7 /* fangMTTests.m */; };
 		E7CA8F601EB9C31A008302A7 /* fangMTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F5F1EB9C31A008302A7 /* fangMTUITests.m */; };
-		E7F567311EBF7FAE00AB78EC /* MJChiBaoZiFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F567301EBF7FAE00AB78EC /* MJChiBaoZiFooter.m */; };
 		E7F567341EBF7FDB00AB78EC /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */; };
 		E856B18D2C30B2EC6F099C86 /* libPods-fangMT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038746DF1A0489567873FA93 /* libPods-fangMT.a */; };
 /* End PBXBuildFile section */
@@ -53,8 +52,8 @@
 		73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.debug.xcconfig"; sourceTree = "<group>"; };
 		E71F73EC1EBDEDB400947704 /* FilterConditionLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterConditionLineView.h; sourceTree = "<group>"; };
 		E71F73ED1EBDEDB400947704 /* FilterConditionLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterConditionLineView.m; sourceTree = "<group>"; };
-		E71F73EF1EBEEDE500947704 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
-		E71F73F01EBEEDE500947704 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		E71F73EF1EBEEDE500947704 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Border.h"; path = "fangMT/UIView+Border.h"; sourceTree = "<group>"; };
+		E71F73F01EBEEDE500947704 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Border.m"; path = "fangMT/UIView+Border.m"; sourceTree = "<group>"; };
 		E71F73F21EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		E71F73F31EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableHeaderCollectionViewCell.m; sourceTree = "<group>"; };
 		E71F73F61EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderCollectionViewCellViewModel.h; sourceTree = "<group>"; };
@@ -88,10 +87,8 @@
 		E7CA8F5B1EB9C31A008302A7 /* fangMTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fangMTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CA8F5F1EB9C31A008302A7 /* fangMTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fangMTUITests.m; sourceTree = "<group>"; };
 		E7CA8F611EB9C31A008302A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F5672F1EBF7FAE00AB78EC /* MJChiBaoZiFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiFooter.h; sourceTree = "<group>"; };
-		E7F567301EBF7FAE00AB78EC /* MJChiBaoZiFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiFooter.m; sourceTree = "<group>"; };
-		E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
-		E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
+		E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJChiBaoZiHeader.h; path = fangMT/MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJChiBaoZiHeader.m; path = fangMT/MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,17 +134,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E71F73EB1EBDED7500947704 /* FilerCondition */ = {
+		E71F73EB1EBDED7500947704 /* FilerConditionView */ = {
 			isa = PBXGroup;
 			children = (
 				E7AB3E781EBDE5C80028D948 /* FilterConditionView.h */,
 				E7AB3E791EBDE5C80028D948 /* FilterConditionView.m */,
 				E71F73EC1EBDEDB400947704 /* FilterConditionLineView.h */,
 				E71F73ED1EBDEDB400947704 /* FilterConditionLineView.m */,
-				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
-				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
 			);
-			name = FilerCondition;
+			name = FilerConditionView;
 			sourceTree = "<group>";
 		};
 		E71F73F51EBEFD5D00947704 /* TableHeaderView */ = {
@@ -183,6 +178,10 @@
 			children = (
 				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
 				E7CA8F391EB9C31A008302A7 /* fangMT */,
+				E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */,
+				E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */,
+				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
+				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
 				E7CA8F531EB9C31A008302A7 /* fangMTTests */,
 				E7CA8F5E1EB9C31A008302A7 /* fangMTUITests */,
 				E7CA8F381EB9C31A008302A7 /* Products */,
@@ -213,13 +212,9 @@
 				E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */,
 				E7CA8F4B1EB9C31A008302A7 /* Info.plist */,
 				E71F73F51EBEFD5D00947704 /* TableHeaderView */,
-				E71F73EB1EBDED7500947704 /* FilerCondition */,
+				E71F73EB1EBDED7500947704 /* FilerConditionView */,
 				E71F73FC1EBEFF1D00947704 /* MerchantInfoList */,
 				E7CA8F3A1EB9C31A008302A7 /* Supporting Files */,
-				E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */,
-				E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */,
-				E7F5672F1EBF7FAE00AB78EC /* MJChiBaoZiFooter.h */,
-				E7F567301EBF7FAE00AB78EC /* MJChiBaoZiFooter.m */,
 			);
 			path = fangMT;
 			sourceTree = "<group>";
@@ -439,7 +434,6 @@
 				E78AFCB01EBAD9A500A58889 /* MerchantInfoListTableViewCell.m in Sources */,
 				E78AFCB51EBBF00400A58889 /* HomePageTableHeaderView.m in Sources */,
 				E7CA8F421EB9C31A008302A7 /* HomePageViewController.m in Sources */,
-				E7F567311EBF7FAE00AB78EC /* MJChiBaoZiFooter.m in Sources */,
 				E71F73F41EBEFC6900947704 /* HomePageTableHeaderCollectionViewCell.m in Sources */,
 				E71F73F81EBEFDD100947704 /* HomePageTableHeaderCollectionViewCellViewModel.m in Sources */,
 				E71F73FB1EBEFEAE00947704 /* HomePageTableHeaderCollectionViewCellModel.m in Sources */,

@@ -11,34 +11,86 @@
 #import "UIView+Border.h"
 
 #define LineViewHeight 39.0
+#define ContainerViewHeight ((_currentTablefilterConditions.count * 44.) < 220.) ? (_currentTablefilterConditions.count * 44.) : 220.
 
-@interface FilterConditionLineView()<FilterConditionViewDelegate>
+const static NSString *kTableViewCommonCellIdentifier = @"tableViewCommonCellIdentifier";
+
+typedef NS_ENUM(NSUInteger, filterTableType) {
+    filterTableTypeZore,
+    filterTableTypeOne,
+    filterTableTypeTwo,
+    filterTableTypeThree
+};
+
+@interface FilterConditionLineView()<FilterConditionViewDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, assign) filterTableType currentFilterTable;
+
+@property (nonatomic, strong) UIView *containerView;
+
+@property (nonatomic, copy) NSMutableArray *currentTablefilterConditions;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation FilterConditionLineView
 
-#pragma mark - setter & getter
-
-- (NSDictionary *)conditionsArray {
-    if (!_conditionsDic) {
-        _conditionsDic = [NSDictionary dictionary];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self configLineView];
+        self.currentFilterTable = filterTableTypeZore;
     }
     
-    return _conditionsDic;
+    return self;
+}
+
+#pragma mark - setter & getter
+
+- (UIView *)containerView {
+    if (!_containerView) {
+        _containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 260., ScreenWidth, ContainerViewHeight)];
+        _containerView.backgroundColor = [UIColor blueColor];
+    }
+
+    return _containerView;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ContainerViewHeight) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCommonCellIdentifier];
+    }
+    
+    return _tableView;
+}
+
+- (NSMutableArray *)oneTablefilterConditions {
+    if (!_currentTablefilterConditions) {
+        _currentTablefilterConditions = [NSMutableArray array];
+    }
+    
+    return _currentTablefilterConditions;
+}
+
+- (void)setCurrentFilterTable:(filterTableType)filterTable {
+    _currentTablefilterConditions = [_fourCategoryDetailArray objectAtIndex:filterTable];
 }
 
 #pragma  mark - helper methods
 
-- (void)configLineViewWithconditionsDic:(NSDictionary *)dic {
-    NSUInteger num = [dic count];
+- (void)configLineView {
+    NSUInteger num = [self.fourCategoryArray count];
     CGFloat width = ScreenWidth / num;
     NSUInteger it = 0;
     
-    for (NSString* name in dic.allKeys) {
+    for (NSString* name in self.fourCategoryArray) {
         CGRect rect = CGRectMake(it*width, 0, width, LineViewHeight);
         FilterConditionView *view = [[FilterConditionView alloc] initWithFrame:rect];
         view.conditionName = name;
+        view.tag = it;
         [view configViewWithNameString:name];
         view.delegate = self;
         [self addSubview:view];
@@ -56,24 +108,60 @@
 
 #pragma mark - FilterConditionViewDelegate
 
--(void)clickFilterCondition:(id)sender {
-    // 这里是弄到对应的value来对点击后下拉的框框做处理，一般是生成一个tableview
+- (void)clickFilterCondition:(id)sender {
+    
     UIButton *button = (UIButton *)sender;
-    NSString *name = button.titleLabel.text;
-    NSArray *filters = _conditionsDic[name];
+    self.currentFilterTable = button.superview.tag;
     
-    // 先创建一个containerView，用来add下拉框的
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 300., ScreenWidth, ScreenHeight - 330. )];
-    containerView.backgroundColor = [UIColor lightGrayColor];
-    for (NSString* filter in filters) {
-        NSLog(@"下拉的这个view是不是又要代理给add这个LineView那个控制器做啊");
-        NSLog(@"%@\n", name);
-        
+    if ([_delegate conformsToProtocol:@protocol(FilterConditionLineViewDelegate)]) {
+        [_delegate clickFilterButtonWithBlock:^{
+            [self.superview addSubview:self.containerView];
+            [self.containerView addSubview:self.tableView];
+
+        }];
     }
-    
-    return ;
-    
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
+#pragma mark - UITableviewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = 44.;
+    
+    return height;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 0.01;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // todo
+    
+    NSLog(@"tableView--%ld--%ld",(long)indexPath.section, (long)indexPath.row);
+}
+
+#pragma mark - UITableviewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return [_currentTablefilterConditions count];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCommonCellIdentifier forIndexPath:indexPath];
+    cell.textLabel.text = [_currentTablefilterConditions objectAtIndex:indexPath.row];
+    
+    return cell;
+}
 
 @end

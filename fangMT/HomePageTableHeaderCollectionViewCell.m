@@ -19,18 +19,18 @@
 
 @implementation HomePageTableHeaderCollectionViewCell
 
-- (void)configViewWithModel:(HomePageTableHeaderCollectionViewCellModel *)model {
-    // 没有考虑存在个别model属性为空的情况
-    self.imageView.image = [UIImage imageNamed:model.imageName];
-    self.titleLabel.text = model.title;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupView];
     }
     
     return self;
+}
+
+- (void)configViewWithModel:(HomePageTableHeaderCollectionViewCellModel *)model {
+    // 没有考虑存在个别model属性为空的情况
+    self.imageView.image = [UIImage imageNamed:model.imageName];
+    self.titleLabel.text = model.title;
 }
 
 #pragma mark - helper method
@@ -40,11 +40,14 @@
     // 图片
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.imageView.image = [UIImage imageNamed:@"image"];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     // title
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.titleLabel.text = @"XX";
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.titleLabel setFont:[UIFont systemFontOfSize:13.]];
+    [self.titleLabel setTextColor:[UIColor grayColor]];
     
     // 需要在加约束之前调用addSubview
     [self.contentView addSubview:_imageView];
@@ -54,7 +57,7 @@
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView.mas_top);
         make.leading.equalTo(self.contentView.mas_leading);
-        make.width.mas_equalTo(ScreenWidth/4.0);
+        make.width.mas_equalTo(ScreenWidth/4.);
         make.height.mas_equalTo(80.);
     }];
     

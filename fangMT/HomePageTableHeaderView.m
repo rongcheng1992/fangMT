@@ -53,21 +53,21 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
 
 
 - (void)mockData {
-    NSArray *array = @[@{@"imageName":@"image",
+    NSArray *array = @[@{@"imageName":@"image1",
                              @"title":@"小吃快餐"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image2",
                              @"title":@"烧烤烤肉"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image3",
                              @"title":@"预约订座"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image4",
                              @"title":@"外卖"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image5",
                              @"title":@"自助餐"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image6",
                              @"title":@"火锅"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image7",
                              @"title":@"川湘菜"},
-                       @{@"imageName":@"image",
+                       @{@"imageName":@"image8",
                              @"title":@"北京菜"}];
     for (NSDictionary *dic in array) {
         HomePageTableHeaderCollectionViewCellModel *model = [[HomePageTableHeaderCollectionViewCellModel alloc] initWithDic:dic];

@@ -17,9 +17,9 @@
 
 @implementation FilterConditionView
 
-- (instancetype)initWithConditionName:(NSString *)conditionName {
-    if (self = [super init]) {
-        [self configViewWithNameString:conditionName];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self configViewWithNameString:_conditionName];
     }
     return self;
 }
@@ -27,7 +27,9 @@
 #pragma mark - setter & getter 
 
 - (void)setConditionName:(NSString *)conditionName {
-   // self.nameButton.titleLabel.text = conditionName;
+    if (_conditionName) {
+        _conditionName = conditionName;
+    }
 }
 
 #pragma mark - helper method
@@ -36,16 +38,16 @@
     self.nameButton = [[UIButton alloc] init];
     [self.nameButton setTitle:name forState:UIControlStateNormal];
     [self.nameButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [self.nameButton.titleLabel setFont:[UIFont systemFontOfSize:15.]];
+    [self.nameButton.titleLabel setFont:[UIFont systemFontOfSize:13.]];
     [self.nameButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchDown];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow"]];
     
     [self addSubview:_nameButton];
     [self addSubview:imageView];
     
     [self.nameButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.mas_equalTo(self.mas_leading);
+        make.leading.mas_equalTo(self.mas_leading).offset(10.);
         make.top.mas_equalTo(self.mas_top);
         make.bottom.mas_equalTo(self.mas_bottom);
         make.width.mas_equalTo(70.);
@@ -55,7 +57,7 @@
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.mas_equalTo(_nameButton.mas_trailing);
         make.top.mas_equalTo(_nameButton.mas_top);
-        make.trailing.mas_equalTo(self.mas_trailing);
+        make.trailing.mas_equalTo(self.mas_trailing).offset(-12.);
         make.bottom.mas_equalTo(_nameButton.mas_bottom);
     }];
 }

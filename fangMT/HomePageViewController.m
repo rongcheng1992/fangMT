@@ -13,11 +13,11 @@
 #import "MerchantInfoListViewModel.h"
 #import "FilterConditionLineView.h"
 #import "MJChiBaoZiHeader.h"
-#import "MJChiBaoZiFooter.h"
+#import "UIView+Border.h"
 
 const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
-@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, FilterConditionLineViewDelegate>
 
 @property (nonatomic, strong) HomePageTableHeaderView *headerView;
 @property (nonatomic, strong) FilterConditionLineView *filterConditionLineView;
@@ -37,10 +37,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     searchView.placeholder = @"输入商家名、品类或商圈";
     self.navigationItem.titleView = searchView;
 
-    
-    self.tableView.mj_header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    self.tableView.mj_footer = [MJChiBaoZiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-    
+    [self configTableViewHeaderAndFooter];
     
     [_tableView registerClass:[MerchantInfoListTableViewCell class] forCellReuseIdentifier:kTableViewCellIdentifier];
     _tableView.delegate = self;
@@ -59,6 +56,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
                                                          Failure:^(id obj) {
                                                              // 请求失败后可以在这里做一些事
                                                          }];
+    
     [self.tableView.mj_header beginRefreshing];
     [self.tableView.mj_footer beginRefreshing];
 
@@ -86,6 +84,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     if (!_headerView) {
         _headerView = [[HomePageTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 220.)];
         [_headerView configHomePageTableHeaderView];
+        [_headerView addTopBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
     }
     
     return _headerView;
@@ -110,14 +109,20 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 - (FilterConditionLineView *)filterConditionLineView {
     if (!_filterConditionLineView) {
         _filterConditionLineView = [[FilterConditionLineView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 39.)];
-        NSDictionary *conditionsDic = @{
-                                        @"全部":@[@"甜点饮品",@"生日蛋糕",@"火锅",@"自助餐",@"小吃快餐",@"日韩料理",@"西餐",@"聚餐宴请"],
-                                        @"附近":@[@"1千米",@"3千米",@"5千米",@"10千米",@"全城"],
-                                        @"智能排序":@[@"离我最近",@"好评优先",@"人气最高"],
-                                        @"筛选":@[@"1千米",@"3千米",@"5千米",@"10千米",@"全城"]
-                                        };
-        _filterConditionLineView.conditionsDic = conditionsDic;
-        [_filterConditionLineView configLineViewWithconditionsDic:conditionsDic];
+        NSArray *conditionsCatergory = @[@"全部",
+                                         @"附近",
+                                         @"智能排序",
+                                         @"筛选"
+                                        ];
+        NSArray *conditionsDetailCatergory = @[@[@"甜点饮品",@"生日蛋糕",@"火锅",@"自助餐",@"小吃快餐",@"日韩料理",@"西餐",@"聚餐宴请"],
+                                               @[@"1千米",@"3千米",@"5千米",@"10千米",@"全城"],
+                                               @[@"离我最近",@"好评优先",@"人气最高"],
+                                               @[@"1千米",@"3千米",@"5千米",@"10千米",@"全城"]];
+        
+        _filterConditionLineView.fourCategoryArray = [conditionsCatergory mutableCopy];
+        _filterConditionLineView.fourCategoryDetailArray = [conditionsDetailCatergory mutableCopy];
+        _filterConditionLineView.delegate = self;
+        [_filterConditionLineView configLineView];
     }
     
     return _filterConditionLineView;
@@ -126,7 +131,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 #pragma mark - UITableviewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat height = 110.;
+    CGFloat height = 105.;
     
     return height;
 }
@@ -198,6 +203,32 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
         // 拿到当前的下拉刷新控件，结束刷新状态
         [tableView.mj_header endRefreshing];
     });
+}
+
+- (void)configTableViewHeaderAndFooter {
+    MJChiBaoZiHeader *header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    header.stateLabel.hidden = YES;
+    self.tableView.mj_header = header;
+    
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+    [footer setTitle:@"下拉加载更多" forState:MJRefreshStateIdle];
+    [footer setTitle:@"加载中" forState:MJRefreshStateRefreshing];
+    [footer setTitle:@"没有更多数据了～" forState:MJRefreshStateNoMoreData];
+    
+    self.tableView.mj_footer = footer;
+}
+
+#pragma mark - FilterConditionLineViewDelegate
+
+- (void)clickFilterButtonWithBlock:(void (^)(void))block {
+    [UIView animateWithDuration:2. animations:^{
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:    UITableViewScrollPositionTop animated:YES];
+    }];
+    
+    block();
 }
 
 @end
