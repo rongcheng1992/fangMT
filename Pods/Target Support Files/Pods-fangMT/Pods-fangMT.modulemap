@@ -1,6 +1,0 @@
-framework module Pods_fangMT {
-  umbrella header "Pods-fangMT-umbrella.h"
-
-  export *
-  module * { export * }
-}
