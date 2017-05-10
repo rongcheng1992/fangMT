@@ -468,11 +468,16 @@
     }
 }
 
-- (void)backgroundTapped:(UITapGestureRecognizer *)paramSender
+- (void)backgroundTapped:(UITapGestureRecognizer *)sender
 {
     [self animateIdicator:_indicators[_currentSelectedMenudIndex] background:_backGroundView tableView:_leftTableView title:_titles[_currentSelectedMenudIndex] forward:NO complecte:^{
         _show = NO;
     }];
+}
+
+- (void)backgroundSwiped:(UITapGestureRecognizer *)sender
+{
+    NSLog(@"接受滑动事件，防止下发给tableview，导致tableView滑动");
 }
 
 #pragma mark - animation method

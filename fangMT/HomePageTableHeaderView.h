@@ -10,6 +10,6 @@
 
 @interface HomePageTableHeaderView : UIView
 
-- (void)configHomePageTableHeaderView;
+//- (void)configHomePageTableHeaderView;
 
 @end

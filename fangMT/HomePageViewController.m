@@ -11,18 +11,20 @@
 #import "HomePageTableHeaderView.h"
 #import "MerchantInfoListModel.h"
 #import "MerchantInfoListViewModel.h"
-#import "FilterConditionLineView.h"
 #import "MJChiBaoZiHeader.h"
 #import "UIView+Border.h"
+#import "ReactiveCocoa.h"
 
 #import "DOPDropDownMenu1.h"
 
 const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
-@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, FilterConditionLineViewDelegate, DOPDropDownMenuDelegate, DOPDropDownMenuDataSource>
+#define tableViewHeaderViewHeight 480.
+
+@interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, DOPDropDownMenuDelegate, DOPDropDownMenuDataSource>
 
 @property (nonatomic, strong) HomePageTableHeaderView *headerView;
-@property (nonatomic, strong) FilterConditionLineView *filterConditionLineView;
+
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) MerchantInfoListViewModel *merchantInfoListViewModel;
@@ -90,6 +92,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     if (!_tableView) {
         CGRect frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
         _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor lightGrayColor];
+
         [self.view addSubview:_tableView];
     }
     
@@ -98,8 +102,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
 - (HomePageTableHeaderView *)headerView {
     if (!_headerView) {
-        _headerView = [[HomePageTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 220.)];
-        [_headerView configHomePageTableHeaderView];
+        _headerView = [[HomePageTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, tableViewHeaderViewHeight)];
+
         [_headerView addTopBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
     }
     
@@ -122,34 +126,23 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return _merchantInfoListArray;
 }
 
-- (FilterConditionLineView *)filterConditionLineView {
-    if (!_filterConditionLineView) {
-        _filterConditionLineView = [[FilterConditionLineView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 39.)];
-        
-        NSArray *conditionsCatergory = @[@"全部",
-                                         @"附近",
-                                         @"智能排序",
-                                         @"筛选"
-                                        ];
-        NSArray *conditionsDetailCatergory = @[@[@"甜点饮品",@"生日蛋糕",@"火锅",@"自助餐",@"小吃快餐",@"日韩料理",@"西餐",@"聚餐宴请"],
-                                               @[@"1千米",@"3千米",@"5千米",@"10千米",@"全城"],
-                                               @[@"离我最近",@"好评优先",@"人气最高"],
-                                               @[@"1千米",@"3千米",@"5千米",@"10千米",@"全城"]];
-        
-        _filterConditionLineView.fourCategoryArray = [conditionsCatergory mutableCopy];
-        _filterConditionLineView.fourCategoryDetailArray = [conditionsDetailCatergory mutableCopy];
-        _filterConditionLineView.delegate = self;
-        [_filterConditionLineView configLineView];
-    }
-    
-    return _filterConditionLineView;
-}
-
 - (DOPDropDownMenu1 *)dropDownMenu {
     if (!_dropDownMenu) {
-        _dropDownMenu = [[DOPDropDownMenu1 alloc] initWithOrigin:CGPointMake(0, 64) andHeight:44.];
+        _dropDownMenu = [[DOPDropDownMenu1 alloc] initWithOrigin:CGPointMake(0, tableViewHeaderViewHeight) andHeight:44.];
+        [_dropDownMenu addTopBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
         _dropDownMenu.dataSource = self;
         _dropDownMenu.delegate = self;
+        
+         @weakify(self);
+        _dropDownMenu.popWillHideBlock = ^{
+             @strongify(self);
+             self.tableView.scrollEnabled = YES;
+        };
+        _dropDownMenu.popWillShowBlock = ^{
+             @strongify(self);
+             self.tableView.scrollEnabled = NO;
+        };
+
         
         //当下拉菜单收回时的回调，用于网络请求新的数据
 //        _dropDownMenu.finishedBlock=^(DOPIndexPath *indexPath){
@@ -219,9 +212,9 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 #pragma mark - helper methods
 
 - (void)loadMoreData {
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
+    // 2.模拟1秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
     __weak UITableView *tableView = self.tableView;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 刷新表格
         [tableView reloadData];
         
@@ -231,9 +224,9 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 }
 
 - (void)loadNewData {
-    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
+    // 2.模拟1秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
     __weak UITableView *tableView = self.tableView;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 刷新表格
         [tableView reloadData];
         
@@ -261,21 +254,10 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     self.classifys = @[@"美食",@"今日新单",@"电影",@"酒店"];
     self.cates = @[@"自助餐",@"快餐",@"火锅",@"日韩料理",@"西餐",@"烧烤小吃"];
     self.movices = @[@"内地剧",@"港台剧",@"英美剧"];
-    self.hostels = @[@"经济酒店",@"商务酒店",@"连锁酒店",@"度假酒店",@"公寓酒店"];
+    self.hostels = @[@"经济酒店",@"商务酒店",@"连锁酒店",@"度假酒店",@"公寓酒店",@"全城",@"芙蓉区",@"雨花区",@"天心区",@"开福区",@"岳麓区"];
     self.areas = @[@"全城",@"芙蓉区",@"雨花区",@"天心区",@"开福区",@"岳麓区"];
     self.sorts = @[@"默认排序",@"离我最近",@"好评优先",@"人气优先",@"最新发布"];
-    self.filters = @[@"默认排序",@"离我最近",@"好评优先",@"人气优先",@"最新发布"];
-}
-
-#pragma mark - FilterConditionLineViewDelegate
-
-- (void)clickFilterButtonWithBlock:(void (^)(void))block {
-    [UIView animateWithDuration:2. animations:^{
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:    UITableViewScrollPositionTop animated:YES];
-    }];
-    
-    block();
+    self.filters = @[@"全城",@"芙蓉区",@"雨花区",@"天心区",@"开福区",@"岳麓区"];
 }
 
 #pragma mark - DOPDropDownMenuDataSource
@@ -410,6 +392,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
     }];
+    
     NSLog(@"I select %ld--%ld--%ld ", indexPath.column, indexPath.row, indexPath.item);
 }
 
