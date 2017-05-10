@@ -1,5 +1,4 @@
 PODS:
-  - DOPDropDownMenu-Enhanced (1.0.0)
   - Masonry (1.0.2)
   - MJRefresh (3.0.2)
   - ReactiveCocoa (2.5):
@@ -9,27 +8,22 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
-  - DOPDropDownMenu-Enhanced (~> 1.0.0)
   - Masonry (= 1.0.2)
   - MJRefresh (= 3.0.2)
   - ReactiveCocoa (= 2.5.0)
-  - Reveal-iOS-SDK
   - SDWebImage (= 4.0.0)
 
 SPEC CHECKSUMS:
-  DOPDropDownMenu-Enhanced: 9ec473b16351b5b0b2d6ef87e7f666fe5ff54ad5
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: 85377dc8c70395cf329e102a5c55505ef387c2e1
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 5aef82a8471a4f012d61395d801b23ee4aa02afa
+PODFILE CHECKSUM: 6b7adc0a07b64130a9bd4cbf817d0d07407335c9
 
 COCOAPODS: 1.2.1

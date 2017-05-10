@@ -30,7 +30,6 @@
 		E7CA8F551EB9C31A008302A7 /* fangMTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F541EB9C31A008302A7 /* fangMTTests.m */; };
 		E7CA8F601EB9C31A008302A7 /* fangMTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F5F1EB9C31A008302A7 /* fangMTUITests.m */; };
 		E7F567341EBF7FDB00AB78EC /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */; };
-		E7F567381EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F567371EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.m */; };
 		E7F5673B1EC1458300AB78EC /* DOPDropDownMenu1.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F5673A1EC1458300AB78EC /* DOPDropDownMenu1.m */; };
 /* End PBXBuildFile section */
 
@@ -100,8 +99,6 @@
 		E7CA8F611EB9C31A008302A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJChiBaoZiHeader.h; path = fangMT/MJChiBaoZiHeader.h; sourceTree = "<group>"; };
 		E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJChiBaoZiHeader.m; path = fangMT/MJChiBaoZiHeader.m; sourceTree = "<group>"; };
-		E7F567361EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DOPDropDownMenu+ClickMenuColumn.h"; sourceTree = "<group>"; };
-		E7F567371EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DOPDropDownMenu+ClickMenuColumn.m"; sourceTree = "<group>"; };
 		E7F567391EC1458300AB78EC /* DOPDropDownMenu1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu1.h; sourceTree = "<group>"; };
 		E7F5673A1EC1458300AB78EC /* DOPDropDownMenu1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,8 +203,6 @@
 		E7CA8F2E1EB9C31A008302A7 = {
 			isa = PBXGroup;
 			children = (
-				E7F567361EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.h */,
-				E7F567371EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.m */,
 				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
 				E7CA8F391EB9C31A008302A7 /* fangMT */,
 				E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */,
@@ -462,7 +457,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7F567381EC1367400AB78EC /* DOPDropDownMenu+ClickMenuColumn.m in Sources */,
 				E759DD691EC228B700C4F2EE /* HomePageRecommendViewController.m in Sources */,
 				E759DD701EC2297500C4F2EE /* HomePageRecommendModel.m in Sources */,
 				E7F567341EBF7FDB00AB78EC /* MJChiBaoZiHeader.m in Sources */,

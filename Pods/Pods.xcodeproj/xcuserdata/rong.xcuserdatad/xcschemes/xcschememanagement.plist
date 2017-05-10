@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DOPDropDownMenu-Enhanced.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4DC30F0F78A3BCC1C484E4C29146A7AC</key>
+		<key>3716C668DC5DF7B46709D14A65189C1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68119A35D8F4C818BFBDA2FB26DCE257</key>
+		<key>B5B70F4DCDE514A369F097FE59DA2D46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC76C576E97997D89FF87D398D6ED757</key>
+		<key>CEC9F000AC6B9ED5B407E9C72C168150</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,11 +53,6 @@
 			<true/>
 		</dict>
 		<key>D52144DE9D7255DE912490FF5A806573</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EAC0EEBF7C97518B5841B3B794C94FFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
