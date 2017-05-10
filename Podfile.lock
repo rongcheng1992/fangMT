@@ -8,22 +8,17 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - Masonry (= 1.0.2)
   - MJRefresh (= 3.0.2)
   - ReactiveCocoa (= 2.5.0)
-  - SDWebImage (= 4.0.0)
 
 SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: 85377dc8c70395cf329e102a5c55505ef387c2e1
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 6b7adc0a07b64130a9bd4cbf817d0d07407335c9
+PODFILE CHECKSUM: 25f3d8ecaaf62ca1016f31a7bea285aa72643b08
 
 COCOAPODS: 1.2.1

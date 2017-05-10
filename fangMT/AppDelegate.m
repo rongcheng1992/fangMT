@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "HomePageViewController.h"
-#import "UIImageView+WebCache.h"
 
 @interface AppDelegate ()
 
