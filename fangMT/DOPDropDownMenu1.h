@@ -1,12 +1,4 @@
 //
-//  DOPDropDownMenu1.h
-//  fangMT
-//
-//  Created by Rong on 2017/5/9.
-//  Copyright © 2017年 Rong. All rights reserved.
-//
-
-//
 //  DOPDropDownMenu.h
 //  DOPDropDownMenuDemo
 //

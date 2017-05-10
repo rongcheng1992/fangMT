@@ -142,17 +142,6 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
              @strongify(self);
              self.tableView.scrollEnabled = NO;
         };
-
-        
-        //当下拉菜单收回时的回调，用于网络请求新的数据
-//        _dropDownMenu.finishedBlock=^(DOPIndexPath *indexPath){
-//            if (indexPath.item >= 0) {
-//                NSLog(@"收起:点击了 %ld - %ld - %ld 项目",indexPath.column,indexPath.row,indexPath.item);
-//            }else {
-//                NSLog(@"收起:点击了 %ld - %ld 项目",indexPath.column,indexPath.row);
-//            }
-//        };
-
     }
    
     return  _dropDownMenu;
