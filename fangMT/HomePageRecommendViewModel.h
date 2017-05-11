@@ -15,8 +15,8 @@ typedef void (^successBlcok)(id obj);
 typedef void (^failureBlcok)(id obj);
 
 - (void)fetchRecommendInfoWithURL:(NSURL *)url
-                             Doing:(doingBlcok)doingBlcok
-                           Success:(successBlcok)successBlcok
-                           Failure:(failureBlcok)failureBlcok;
+                            Doing:(doingBlcok)doingBlcok
+                          Success:(successBlcok)successBlcok
+                          Failure:(failureBlcok)failureBlcok;
 
 @end

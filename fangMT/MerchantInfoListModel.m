@@ -25,7 +25,8 @@
    otherDescription: @""
  }
  */
-- (instancetype)initWithDic:(NSDictionary *)dic {
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
     if (dic[@"merchantImageURL"]) {
         _merchantImageURL = dic[@"merchantImageURL"];
     } else {

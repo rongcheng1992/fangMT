@@ -10,13 +10,13 @@
 
 @interface HomePageRecommendModel : NSObject
 
-@property (nonatomic, copy) NSString* mainTitle;
+@property (nonatomic, copy) NSString *mainTitle;
 
-@property (nonatomic, copy) NSString* subTitle;
+@property (nonatomic, copy) NSString *subTitle;
 
-@property (nonatomic, copy) NSString* imageName;
+@property (nonatomic, copy) NSString *imageName;
 
-@property (nonatomic, copy) NSString* detailDes;
+@property (nonatomic, copy) NSString *detailDes;
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 

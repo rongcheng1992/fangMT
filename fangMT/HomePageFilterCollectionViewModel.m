@@ -10,7 +10,8 @@
 
 @implementation HomePageFilterCollectionViewModel
 
-- (instancetype)initWithDic:(NSDictionary *)dic {
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
     if (dic[@"imageName"]) {
         _imageName = dic[@"imageName"];
     } else {

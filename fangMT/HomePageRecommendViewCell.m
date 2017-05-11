@@ -21,7 +21,8 @@
 
 @implementation HomePageRecommendViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     if (self = [super initWithFrame:frame]) {
         [self setupView];
     }
@@ -29,7 +30,8 @@
     return self;
 }
 
-- (void)configViewWithModel:(HomePageRecommendModel *)model {
+- (void)configViewWithModel:(HomePageRecommendModel *)model
+{
     // 没有考虑存在个别model属性为空的情况
     NSTextAlignment alignment = _isPositonMiddle ? NSTextAlignmentCenter : NSTextAlignmentLeft;
     
@@ -83,9 +85,8 @@
 
 #pragma mark - helper method
 
-- (void)setupView {
-    
-    
+- (void)setupView
+{
     // 图片
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.imageView.image = [UIImage imageNamed:@"image"];

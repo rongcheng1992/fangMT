@@ -19,7 +19,8 @@
 
 @implementation HomePageFilterCollectionViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     if (self = [super initWithFrame:frame]) {
         [self setupView];
     }
@@ -27,7 +28,8 @@
     return self;
 }
 
-- (void)configViewWithModel:(HomePageFilterCollectionViewModel *)model {
+- (void)configViewWithModel:(HomePageFilterCollectionViewModel *)model
+{
     // 没有考虑存在个别model属性为空的情况
     self.imageView.image = [UIImage imageNamed:model.imageName];
     self.titleLabel.text = model.title;
@@ -35,8 +37,8 @@
 
 #pragma mark - helper method
 
-- (void)setupView {
-    
+- (void)setupView
+{
     // 图片
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     self.imageView.image = [UIImage imageNamed:@"image"];

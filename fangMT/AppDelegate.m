@@ -63,7 +63,8 @@
 
 #pragma mark - setter & getter
 
-- (HomePageViewController *)homePageViewController {
+- (HomePageViewController *)homePageViewController
+{
     if (!_homePageViewController) {
         _homePageViewController = [[HomePageViewController alloc] init];
     }
@@ -73,7 +74,8 @@
 
 #pragma mark -- button target
 
-- (void)didClicklocationButton {
+- (void)didClicklocationButton
+{
     NSLog(@"此处应跳转到地图界面");
 }
 

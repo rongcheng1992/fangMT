@@ -11,7 +11,7 @@
 
 @interface HomePageRecommendViewCell : UIView
 
-@property (nonatomic, assign)BOOL isPositonMiddle;
+@property (nonatomic, assign) BOOL isPositonMiddle;
 
 - (void)configViewWithModel:(HomePageRecommendViewModel *)model;
 

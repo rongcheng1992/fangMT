@@ -24,7 +24,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
 
 @implementation HomePageTableHeaderView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame
+{
     if (self = [super initWithFrame:frame]) {
         [self.filterCollectionViewController configFilterViewPositionY:0 Height:FilterCollectionViewHeight];
         [self.recommendViewController configRecommendViewPositionY:FilterCollectionViewHeight + 20.  Height:RecommendViewHeight];
@@ -35,7 +36,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
 
 #pragma mark - setter & getter
 
-- (HomePageFilterCollectionViewController *)filterCollectionViewController {
+- (HomePageFilterCollectionViewController *)filterCollectionViewController
+{
     if (!_filterCollectionViewController) {
         _filterCollectionViewController = [[HomePageFilterCollectionViewController alloc] init];
         [ self addSubview:_filterCollectionViewController.view];
@@ -44,7 +46,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
     return _filterCollectionViewController;
 }
 
-- (HomePageRecommendViewController *)recommendViewController {
+- (HomePageRecommendViewController *)recommendViewController
+{
     if (!_recommendViewController) {
         _recommendViewController = [[HomePageRecommendViewController alloc] init];
         [ self addSubview:_recommendViewController.view];

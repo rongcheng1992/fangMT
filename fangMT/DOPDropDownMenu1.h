@@ -14,10 +14,11 @@
 @property (nonatomic, assign) NSInteger column;
 @property (nonatomic, assign) NSInteger row;
 @property (nonatomic, assign) NSInteger item;
+
 - (instancetype)initWithColumn:(NSInteger)column row:(NSInteger)row;
-// default item = -1
 + (instancetype)indexPathWithCol:(NSInteger)col row:(NSInteger)row;
 + (instancetype)indexPathWithCol:(NSInteger)col row:(NSInteger)row item:(NSInteger)item;
+
 @end
 
 @interface DOPBackgroundCellView1 : UIView
@@ -42,6 +43,7 @@
 - (NSString *)menu:(DOPDropDownMenu1 *)menu titleForRowAtIndexPath:(DOPIndexPath1 *)indexPath;
 
 @optional
+
 /**
  *  返回 menu 有多少列 ，默认1列
  */
@@ -65,9 +67,16 @@
  */
 - (NSString *)menu:(DOPDropDownMenu1 *)menu titleForItemsInRowAtIndexPath:(DOPIndexPath1 *)indexPath;
 
-// 新增 当有column列 row 行 item项 image
+/** 新增
+ *  当有column列 row 行 item项 image
+ *  如果都没有可以不实现该协议
+ */
 - (NSString *)menu:(DOPDropDownMenu1 *)menu imageNameForItemsInRowAtIndexPath:(DOPIndexPath1 *)indexPath;
-// 新增
+
+/** 新增
+ *  当有column列 row 行 item项 detailDescription
+ *  如果都没有可以不实现该协议
+ */
 - (NSString *)menu:(DOPDropDownMenu1 *)menu detailTextForItemsInRowAtIndexPath:(DOPIndexPath1 *)indexPath;
 
 @end
@@ -112,7 +121,7 @@
 @property (nonatomic, assign) BOOL isClickHaveItemValid;
 
 @property (nonatomic, getter=isRemainMenuTitle) BOOL remainMenuTitle; // 切换条件时是否更改menu title
-@property (nonatomic, strong) NSMutableArray  *currentSelectRowArray; // 恢复默认选项用
+@property (nonatomic, strong) NSMutableArray *currentSelectRowArray; // 恢复默认选项用
 
 @property (nonatomic, copy) void (^popWillShowBlock)();
 @property (nonatomic, copy) void (^popWillHideBlock)();
@@ -127,18 +136,34 @@
  */
 - (instancetype)initWithOrigin:(CGPoint)origin andHeight:(CGFloat)height;
 
-// 获取title
+/**
+ *获取title
+ *@param indexPath 路径
+ *@return 返回indexPath所在title
+*/
 - (NSString *)titleForRowAtIndexPath:(DOPIndexPath1 *)indexPath;
 
-// 重新加载数据
+/**
+ 重新加载数据
+ */
 - (void)reloadData;
 
-// 创建menu 第一次显示 不会调用点击代理，这个手动调用
+
+/**
+ 创建menu 第一次显示 不会调用点击代理，这个手动调用
+ */
 - (void)selectDefalutIndexPath;
 
-- (void)selectIndexPath:(DOPIndexPath1 *)indexPath; // 默认trigger delegate
 
-- (void)selectIndexPath:(DOPIndexPath1 *)indexPath triggerDelegate:(BOOL)trigger; // 调用代理
+/**
+ 默认trigger delegate
+ */
+- (void)selectIndexPath:(DOPIndexPath1 *)indexPath; 
+
+
+/**
+ 调用代理
+ */
+- (void)selectIndexPath:(DOPIndexPath1 *)indexPath triggerDelegate:(BOOL)trigger; //
 
 @end
-

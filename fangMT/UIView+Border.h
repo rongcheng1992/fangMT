@@ -18,5 +18,4 @@
 
 - (void)addRightBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth;
 
-
 @end

@@ -10,7 +10,8 @@
 
 @implementation HomePageRecommendModel
 
-- (instancetype)initWithDic:(NSDictionary *)dic {
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
     if (dic[@"mainTitle"]) {
         _mainTitle = dic[@"mainTitle"];
     } else {

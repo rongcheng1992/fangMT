@@ -10,7 +10,8 @@
 
 @implementation MJChiBaoZiHeader
 
-- (void)prepare {
+- (void)prepare
+{
     [super prepare];
     
     NSMutableArray *idleImages = [NSMutableArray array];

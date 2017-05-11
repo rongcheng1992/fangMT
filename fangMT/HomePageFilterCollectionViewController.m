@@ -11,13 +11,13 @@
 #import "HomePageFilterCollectionViewViewModel.h"
 #import "HomePageFilterCollectionViewModel.h"
 
-const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdentifier";
+const static NSString* kCollectionViewCellIdentifier = @"kCollectionViewCellIdentifier";
 
 @interface HomePageFilterCollectionViewController()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) HomePageFilterCollectionViewViewModel *viewModel;
-@property (nonatomic,copy) NSMutableArray *collectionInfoArray;
+@property (nonatomic, copy) NSMutableArray *collectionInfoArray;
 
 @end
 
@@ -54,7 +54,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
     // do sth
 }
 
-- (void)mockData {
+- (void)mockData
+{
     NSArray *array = @[@{@"imageName":@"image1",
                          @"title":@"小吃快餐"},
                        @{@"imageName":@"image2",
@@ -110,7 +111,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
 
 #pragma mark - setter & getter
 
-- (UICollectionView *)collectionView {
+- (UICollectionView *)collectionView
+{
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.minimumInteritemSpacing = 0;
@@ -129,7 +131,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
     return _collectionView;
 }
 
-- (HomePageFilterCollectionViewViewModel *)viewModel {
+- (HomePageFilterCollectionViewViewModel *)viewModel
+{
     if (!_viewModel) {
         _viewModel = [[HomePageFilterCollectionViewViewModel alloc] init];
     }
@@ -137,7 +140,8 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
     return _viewModel;
 }
 
-- (NSMutableArray *)collectionInfoArray {
+- (NSMutableArray *)collectionInfoArray
+{
     if (!_collectionInfoArray) {
         _collectionInfoArray = [[NSMutableArray alloc ] init];
     }
@@ -145,8 +149,10 @@ const static NSString* kCollectionViewCellIdentifier = @"ollectionViewCellIdenti
     return _collectionInfoArray;
 }
 
-- (void)configFilterViewPositionY:(CGFloat)y Height:(CGFloat)filterViewHeight {
+- (void)configFilterViewPositionY:(CGFloat)y Height:(CGFloat)filterViewHeight
+{
     self.view.frame = CGRectMake(0, 0, ScreenWidth, filterViewHeight);
     self.collectionView.frame = CGRectMake(0, 0, ScreenWidth, filterViewHeight);
 }
+
 @end

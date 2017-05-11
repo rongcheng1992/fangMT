@@ -13,7 +13,8 @@
 
 @implementation UIView (Border)
 
-- (void)addBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth {
+- (void)addBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth
+{
     CALayer *border = [CALayer layer];
     border.backgroundColor = color.CGColor;
     
@@ -21,7 +22,8 @@
     [self.layer addSublayer:border];
 }
 
-- (void)addTopBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth {
+- (void)addTopBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth
+{
     CALayer *border = [CALayer layer];
     border.backgroundColor = color.CGColor;
     
@@ -29,7 +31,8 @@
     [self.layer addSublayer:border];
 }
 
-- (void)addLeftBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth {
+- (void)addLeftBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth
+{
     CALayer *border = [CALayer layer];
     border.backgroundColor = color.CGColor;
     
@@ -38,7 +41,8 @@
 
 }
 
-- (void)addRightBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth {
+- (void)addRightBorderWithColor:(UIColor *)color andWidth:(CGFloat)borderWidth
+{
     CALayer *border = [CALayer layer];
     border.backgroundColor = color.CGColor;
     

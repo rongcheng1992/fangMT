@@ -14,14 +14,15 @@
 
 @interface HomePageRecommendViewController ()
 
-@property (nonatomic, strong)HomePageRecommendViewModel *viewModel;
-@property (nonatomic,copy) NSMutableArray *recommendInfoArray;
+@property (nonatomic, strong) HomePageRecommendViewModel *viewModel;
+@property (nonatomic, copy) NSMutableArray *recommendInfoArray;
 
 @end
 
 @implementation HomePageRecommendViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self.viewModel fetchRecommendInfoWithURL:[NSURL URLWithString:@"XXX"]
@@ -44,7 +45,8 @@
 
 #pragma mark - getter
 
-- (NSMutableArray *)recommendInfoArray {
+- (NSMutableArray *)recommendInfoArray
+{
     if (!_recommendInfoArray) {
         _recommendInfoArray = [NSMutableArray array];
     }
@@ -54,8 +56,8 @@
 
 #pragma mark - helper method
 
-- (void)configRecommendView {
-    
+- (void)configRecommendView
+{
     BOOL flip = NO;
     for (NSUInteger i = 0; i < _recommendInfoArray.count; i ++) {
         CGRect rect;
@@ -91,8 +93,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)mockData {
-    
+- (void)mockData
+{
     NSArray *array = @[@{@"mainTitle":@"名店特惠",
                          @"subTitle":@"优质商家精选",
                          @"imageName":@"recommend0",
@@ -122,7 +124,8 @@
     return ;
 }
 
-- (void)configRecommendViewPositionY:(CGFloat)y Height:(CGFloat)recommendViewHeight {
+- (void)configRecommendViewPositionY:(CGFloat)y Height:(CGFloat)recommendViewHeight
+{
     self.view.frame = CGRectMake(0, y, ScreenWidth, recommendViewHeight);
 }
 

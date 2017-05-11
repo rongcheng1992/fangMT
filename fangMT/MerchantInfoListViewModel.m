@@ -10,7 +10,8 @@
 
 @implementation MerchantInfoListViewModel
 
--(void)fetchMerchantInfoListWithURL:(NSURL *)url Doing:(doingBlcok)doingBlcok Success:(successBlcok)successBlcok Failure:(failureBlcok)failureBlcok {
+-(void)fetchMerchantInfoListWithURL:(NSURL *)url Doing:(doingBlcok)doingBlcok Success:(successBlcok)successBlcok Failure:(failureBlcok)failureBlcok
+{
     // 在这里发起请求
     
 }

@@ -10,7 +10,8 @@
 
 @implementation HomePageFilterCollectionViewViewModel
 
-- (void)fetchCollectionInfoWithURL:(NSURL *)url Doing:(doingBlcok)doingBlcok Success:(successBlcok)successBlcok Failure:(failureBlcok)failureBlcok {
+- (void)fetchCollectionInfoWithURL:(NSURL *)url Doing:(doingBlcok)doingBlcok Success:(successBlcok)successBlcok Failure:(failureBlcok)failureBlcok
+{
       // 在这里发起请求
 }
 

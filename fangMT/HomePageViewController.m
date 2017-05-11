@@ -24,29 +24,26 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, DOPDropDownMenuDelegate, DOPDropDownMenuDataSource>
 
 @property (nonatomic, strong) HomePageTableHeaderView *headerView;
-
 @property (nonatomic, strong) UITableView *tableView;
-
 @property (nonatomic, strong) MerchantInfoListViewModel *merchantInfoListViewModel;
+@property (nonatomic, strong) DOPDropDownMenu1 *dropDownMenu;
 @property (nonatomic, copy) NSMutableArray *merchantInfoListArray;
 
-@property (nonatomic, strong) DOPDropDownMenu1 *dropDownMenu;
-
 // dropDownMenu数据
-@property (nonatomic, strong) NSArray *classifys;
-@property (nonatomic, strong) NSArray *cates;
-@property (nonatomic, strong) NSArray *movices;
-@property (nonatomic, strong) NSArray *hostels;
-
-@property (nonatomic, strong) NSArray *areas;
-@property (nonatomic, strong) NSArray *sorts;
-@property (nonatomic, strong) NSArray *filters;
+@property (nonatomic, copy) NSArray *classifys;
+@property (nonatomic, copy) NSArray *cates;
+@property (nonatomic, copy) NSArray *movices;
+@property (nonatomic, copy) NSArray *hostels;
+@property (nonatomic, copy) NSArray *areas;
+@property (nonatomic, copy) NSArray *sorts;
+@property (nonatomic, copy) NSArray *filters;
 
 @end
 
 @implementation HomePageViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     UISearchBar *searchView = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 100., 40.)];
@@ -80,7 +77,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     
     [self.tableView reloadData];
@@ -88,7 +86,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
 #pragma mark - setter & getter
 
-- (UITableView *)tableView {
+- (UITableView *)tableView
+{
     if (!_tableView) {
         CGRect frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
         _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
@@ -100,7 +99,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return _tableView;
 }
 
-- (HomePageTableHeaderView *)headerView {
+- (HomePageTableHeaderView *)headerView
+{
     if (!_headerView) {
         _headerView = [[HomePageTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, tableViewHeaderViewHeight)];
 
@@ -110,7 +110,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return _headerView;
 }
 
-- (MerchantInfoListViewModel *)merchantInfoListViewModel {
+- (MerchantInfoListViewModel *)merchantInfoListViewModel
+{
     if (!_merchantInfoListViewModel) {
         _merchantInfoListViewModel = [[MerchantInfoListViewModel alloc] init];
     }
@@ -118,7 +119,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return _merchantInfoListViewModel;
 }
 
-- (NSMutableArray *)merchantInfoListArray {
+- (NSMutableArray *)merchantInfoListArray
+{
     if (!_merchantInfoListArray) {
         _merchantInfoListArray = [[NSMutableArray alloc ] init];
     }
@@ -126,7 +128,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return _merchantInfoListArray;
 }
 
-- (DOPDropDownMenu1 *)dropDownMenu {
+- (DOPDropDownMenu1 *)dropDownMenu
+{
     if (!_dropDownMenu) {
         _dropDownMenu = [[DOPDropDownMenu1 alloc] initWithOrigin:CGPointMake(0, tableViewHeaderViewHeight) andHeight:44.];
         [_dropDownMenu addTopBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
@@ -185,7 +188,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     //return [_merchantInfoListArray count];
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 1;
 }
@@ -200,7 +203,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
 #pragma mark - helper methods
 
-- (void)loadMoreData {
+- (void)loadMoreData
+ {
     // 2.模拟1秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
     __weak UITableView *tableView = self.tableView;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -212,7 +216,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     });
 }
 
-- (void)loadNewData {
+- (void)loadNewData
+{
     // 2.模拟1秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
     __weak UITableView *tableView = self.tableView;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -224,7 +229,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     });
 }
 
-- (void)configTableViewHeaderAndFooter {
+- (void)configTableViewHeaderAndFooter
+{
     MJChiBaoZiHeader *header = [MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     header.lastUpdatedTimeLabel.hidden = YES;
     header.stateLabel.hidden = YES;
@@ -239,7 +245,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     self.tableView.mj_footer = footer;
 }
 
-- (void)mockFiterData {
+- (void)mockFiterData
+{
     self.classifys = @[@"美食",@"今日新单",@"电影",@"酒店"];
     self.cates = @[@"自助餐",@"快餐",@"火锅",@"日韩料理",@"西餐",@"烧烤小吃"];
     self.movices = @[@"内地剧",@"港台剧",@"英美剧"];
@@ -251,10 +258,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 
 #pragma mark - DOPDropDownMenuDataSource
 
-/**
- *  返回 menu 第column列有多少行
- */
-- (NSInteger)menu:(DOPDropDownMenu1 *)menu numberOfRowsInColumn:(NSInteger)column {
+- (NSInteger)menu:(DOPDropDownMenu1 *)menu numberOfRowsInColumn:(NSInteger)column
+{
     NSUInteger rows = 1;
     switch (column) {
         case 0:
@@ -276,10 +281,8 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return rows;
 }
 
-/**
- *  返回 menu 第column列 每行title
- */
-- (NSString *)menu:(DOPDropDownMenu1 *)menu titleForRowAtIndexPath:(DOPIndexPath1 *)indexPath {
+- (NSString *)menu:(DOPDropDownMenu1 *)menu titleForRowAtIndexPath:(DOPIndexPath1 *)indexPath
+{
     NSString *title = @"";
     switch (indexPath.column) {
         case 0:
@@ -301,16 +304,15 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return title;
 }
 
-/**
- *  返回 menu 有多少列 ，默认1列
- */
-- (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu1 *)menu {
+- (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu1 *)menu
+{
     return 4;
 }
 
-// 新增 返回 menu 第column列 每行image
-- (NSString *)menu:(DOPDropDownMenu1 *)menu imageNameForRowAtIndexPath:(DOPIndexPath1 *)indexPath {
+- (NSString *)menu:(DOPDropDownMenu1 *)menu imageNameForRowAtIndexPath:(DOPIndexPath1 *)indexPath
+{
     if (indexPath.column == 0 || indexPath.column == 1) {
+        
         return [NSString stringWithFormat:@"ic_filter_category_%ld",indexPath.row];
     }
     
@@ -342,6 +344,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
             return self.hostels[indexPath.item];
         }
     }
+    
     return nil;
 }
 
@@ -359,29 +362,21 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
     return [@(arc4random()%1000) stringValue];
 }
 
-#pragma mark - DOPDropDownMenuExtendDelegate
-
-- (void)menu:(DOPDropDownMenu1 *)menu didSelectColumn:(NSUInteger)column {
-    // 在这里尝试做动画
-    [UIView animateWithDuration:2. animations:^{
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-    }];
-    NSLog(@"I select column--%ld ", column);
-}
-
 #pragma mark - DOPDropDownMenuDelegate
 
-/**
- *  点击代理，点击了第column 第row 或者item项，如果 item >=0
- */
-- (void)menu:(DOPDropDownMenu1 *)menu didSelectRowAtIndexPath:(DOPIndexPath1 *)indexPath {
+- (void)menu:(DOPDropDownMenu1 *)menu didSelectColumn:(NSUInteger)column
+{
     // 在这里尝试做动画
     [UIView animateWithDuration:2. animations:^{
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
     }];
     
+    NSLog(@"I select column--%ld ", column);
+}
+
+- (void)menu:(DOPDropDownMenu1 *)menu didSelectRowAtIndexPath:(DOPIndexPath1 *)indexPath
+{
     NSLog(@"I select %ld--%ld--%ld ", indexPath.column, indexPath.row, indexPath.item);
 }
 

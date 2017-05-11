@@ -10,7 +10,8 @@
 
 @implementation HomePageRecommendViewModel
 
-- (void)fetchRecommendInfoWithURL:(NSURL *)url Doing:(doingBlcok)doingBlcok Success:(successBlcok)successBlcok Failure:(failureBlcok)failureBlcok {
+- (void)fetchRecommendInfoWithURL:(NSURL *)url Doing:(doingBlcok)doingBlcok Success:(successBlcok)successBlcok Failure:(failureBlcok)failureBlcok
+{
     // 在这里发起请求
 }
 
