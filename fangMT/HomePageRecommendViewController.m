@@ -15,7 +15,7 @@
 @interface HomePageRecommendViewController ()
 
 @property (nonatomic, strong) HomePageRecommendViewModel *viewModel;
-@property (nonatomic, copy) NSMutableArray *recommendInfoArray;
+@property (nonatomic, strong) NSMutableArray *recommendInfoArray;
 
 @end
 
@@ -38,6 +38,7 @@
                                        Failure:^(id obj) {
                                            // 请求失败后可以在这里做一些事
                                        }];
+
     [self mockData];
     
     [self configRecommendView];

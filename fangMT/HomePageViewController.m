@@ -27,7 +27,7 @@ const static NSString *kTableViewCellIdentifier = @"tableViewCellIdentifier";
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) MerchantInfoListViewModel *merchantInfoListViewModel;
 @property (nonatomic, strong) DOPDropDownMenu1 *dropDownMenu;
-@property (nonatomic, copy) NSMutableArray *merchantInfoListArray;
+@property (nonatomic, strong) NSMutableArray *merchantInfoListArray;
 
 // dropDownMenu数据
 @property (nonatomic, copy) NSArray *classifys;

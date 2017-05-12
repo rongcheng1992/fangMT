@@ -12,28 +12,30 @@
 
 - (instancetype)initWithDic:(NSDictionary *)dic
 {
-    if (dic[@"mainTitle"]) {
-        _mainTitle = dic[@"mainTitle"];
-    } else {
-        _mainTitle = @"默认";
-    }
-    
-    if (dic[@"subTitle"]) {
-        _subTitle = dic[@"subTitle"];
-    } else {
-        _subTitle = @"默认";
-    }
-    
-    if (dic[@"imageName"]) {
-        _imageName = dic[@"imageName"];
-    } else {
-        _imageName = @"默认";
-    }
-    
-    if (dic[@"detailDes"]) {
-        _detailDes = dic[@"detailDes"];
-    } else {
-        _detailDes = nil;
+    if (self = [super init]) {
+        if (dic[@"mainTitle"]) {
+            _mainTitle = dic[@"mainTitle"];
+        } else {
+            _mainTitle = @"默认";
+        }
+        
+        if (dic[@"subTitle"]) {
+            _subTitle = dic[@"subTitle"];
+        } else {
+            _subTitle = @"默认";
+        }
+        
+        if (dic[@"imageName"]) {
+            _imageName = dic[@"imageName"];
+        } else {
+            _imageName = @"默认";
+        }
+        
+        if (dic[@"detailDes"]) {
+            _detailDes = dic[@"detailDes"];
+        } else {
+            _detailDes = nil;
+        }
     }
     
     return self;

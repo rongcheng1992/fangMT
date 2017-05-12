@@ -17,7 +17,7 @@ const static NSString* kCollectionViewCellIdentifier = @"kCollectionViewCellIden
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) HomePageFilterCollectionViewViewModel *viewModel;
-@property (nonatomic, copy) NSMutableArray *collectionInfoArray;
+@property (nonatomic, strong) NSMutableArray *collectionInfoArray;
 
 @end
 

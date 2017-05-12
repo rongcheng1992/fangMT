@@ -12,16 +12,18 @@
 
 - (instancetype)initWithDic:(NSDictionary *)dic
 {
-    if (dic[@"imageName"]) {
-        _imageName = dic[@"imageName"];
-    } else {
-        _imageName = @"默认";
-    }
-    
-    if (dic[@"title"]) {
-        _title = dic[@"title"];
-    } else {
-        _title = @"默认";
+    if (self = [super init]) {
+        if (dic[@"imageName"]) {
+            _imageName = dic[@"imageName"];
+        } else {
+            _imageName = @"默认";
+        }
+        
+        if (dic[@"title"]) {
+            _title = dic[@"title"];
+        } else {
+            _title = @"默认";
+        }
     }
     
     return self;
