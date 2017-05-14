@@ -1,5 +1,5 @@
 //
-//  HomePageFilterCollectionViewViewModel.h
+//  FMTHomePageFilterCollectionViewModel.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/7.
@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HomePageFilterCollectionViewViewModel : NSObject
+@interface FMTHomePageFilterCollectionViewModel : NSObject
 
 typedef void (^doingBlcok)(id obj);
 typedef void (^successBlcok)(id obj);
 typedef void (^failureBlcok)(id obj);
 
 - (void)fetchCollectionInfoWithURL:(NSURL *)url
-                             Doing:(doingBlcok)doingBlcok
-                           Success:(successBlcok)successBlcok
-                           Failure:(failureBlcok)failureBlcok;
+                             doing:(doingBlcok)doingBlcok
+                           success:(successBlcok)successBlcok
+                           failure:(failureBlcok)failureBlcok;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  HomePageFilterCollectionViewModel.h
+//  FMTHomePageFilterCollectionModel.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/7.
@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HomePageFilterCollectionViewModel : NSObject
+@interface FMTHomePageFilterCollectionModel : NSObject
 
 @property (nonatomic, copy) NSString *imageName;
-
 @property (nonatomic, copy) NSString *title;
 
 - (instancetype)initWithDic:(NSDictionary *)dic;

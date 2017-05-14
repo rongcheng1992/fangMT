@@ -1,5 +1,5 @@
 //
-//  HomePageRecommendModel.h
+//  FMTHomePageRecommendModel.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/10.
@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HomePageRecommendModel : NSObject
+@interface FMTHomePageRecommendModel : NSObject
 
 @property (nonatomic, copy) NSString *mainTitle;
-
 @property (nonatomic, copy) NSString *subTitle;
-
 @property (nonatomic, copy) NSString *imageName;
-
 @property (nonatomic, copy) NSString *detailDes;
 
 - (instancetype)initWithDic:(NSDictionary *)dic;

@@ -1,5 +1,5 @@
 //
-//  HomePageTableHeaderView.h
+//  FMTHomePageTableHeaderView.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/5.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomePageTableHeaderView : UIView
-
-//- (void)configHomePageTableHeaderView;
+@interface FMTHomePageTableHeaderView : UIView
 
 @end

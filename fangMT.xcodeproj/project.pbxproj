@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		0D2334FB13709FD0E99709E2 /* Pods_fangMT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC298A2CBAC626D63C13B815 /* Pods_fangMT.framework */; };
 		E71F73F11EBEEDE500947704 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F01EBEEDE500947704 /* UIView+Border.m */; };
-		E71F73F41EBEFC6900947704 /* HomePageFilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F31EBEFC6900947704 /* HomePageFilterCollectionViewCell.m */; };
-		E71F73F81EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F71EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.m */; };
-		E71F73FB1EBEFEAE00947704 /* HomePageFilterCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73FA1EBEFEAE00947704 /* HomePageFilterCollectionViewModel.m */; };
-		E759DD651EC2233800C4F2EE /* HomePageFilterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD641EC2233800C4F2EE /* HomePageFilterCollectionViewController.m */; };
-		E759DD691EC228B700C4F2EE /* HomePageRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD681EC228B700C4F2EE /* HomePageRecommendViewController.m */; };
-		E759DD6D1EC2295200C4F2EE /* HomePageRecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD6C1EC2295200C4F2EE /* HomePageRecommendViewModel.m */; };
-		E759DD701EC2297500C4F2EE /* HomePageRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD6F1EC2297500C4F2EE /* HomePageRecommendModel.m */; };
-		E759DD731EC22E9C00C4F2EE /* HomePageRecommendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD721EC22E9C00C4F2EE /* HomePageRecommendViewCell.m */; };
-		E78AFCAA1EBAD61A00A58889 /* MerchantInfoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCA91EBAD61A00A58889 /* MerchantInfoListModel.m */; };
-		E78AFCAD1EBAD63F00A58889 /* MerchantInfoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAC1EBAD63F00A58889 /* MerchantInfoListViewModel.m */; };
-		E78AFCB01EBAD9A500A58889 /* MerchantInfoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAF1EBAD9A500A58889 /* MerchantInfoListTableViewCell.m */; };
-		E78AFCB51EBBF00400A58889 /* HomePageTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCB41EBBF00400A58889 /* HomePageTableHeaderView.m */; };
+		E71F73F41EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F31EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m */; };
+		E71F73F81EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F71EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m */; };
+		E71F73FB1EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73FA1EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.m */; };
+		E759DD651EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD641EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.m */; };
+		E759DD691EC228B700C4F2EE /* FMTHomePageRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD681EC228B700C4F2EE /* FMTHomePageRecommendViewController.m */; };
+		E759DD6D1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD6C1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.m */; };
+		E759DD701EC2297500C4F2EE /* FMTHomePageRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD6F1EC2297500C4F2EE /* FMTHomePageRecommendModel.m */; };
+		E759DD731EC22E9C00C4F2EE /* FMTHomePageRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E759DD721EC22E9C00C4F2EE /* FMTHomePageRecommendCell.m */; };
+		E78AFCAA1EBAD61A00A58889 /* FMTMerchantInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCA91EBAD61A00A58889 /* FMTMerchantInfoModel.m */; };
+		E78AFCAD1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */; };
+		E78AFCB01EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */; };
+		E78AFCB51EBBF00400A58889 /* FMTHomePageTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCB41EBBF00400A58889 /* FMTHomePageTableHeaderView.m */; };
 		E7CA8F3C1EB9C31A008302A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3B1EB9C31A008302A7 /* main.m */; };
 		E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */; };
-		E7CA8F421EB9C31A008302A7 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F411EB9C31A008302A7 /* HomePageViewController.m */; };
+		E7CA8F421EB9C31A008302A7 /* FMTHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */; };
 		E7CA8F451EB9C31A008302A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F431EB9C31A008302A7 /* Main.storyboard */; };
 		E7CA8F471EB9C31A008302A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F461EB9C31A008302A7 /* Assets.xcassets */; };
 		E7CA8F4A1EB9C31A008302A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */; };
@@ -54,39 +54,39 @@
 		28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.release.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.release.xcconfig"; sourceTree = "<group>"; };
 		73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.debug.xcconfig"; sourceTree = "<group>"; };
 		AC298A2CBAC626D63C13B815 /* Pods_fangMT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fangMT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E71F73EF1EBEEDE500947704 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Border.h"; path = "fangMT/UIView+Border.h"; sourceTree = "<group>"; };
-		E71F73F01EBEEDE500947704 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Border.m"; path = "fangMT/UIView+Border.m"; sourceTree = "<group>"; };
-		E71F73F21EBEFC6900947704 /* HomePageFilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageFilterCollectionViewCell.h; sourceTree = "<group>"; };
-		E71F73F31EBEFC6900947704 /* HomePageFilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageFilterCollectionViewCell.m; sourceTree = "<group>"; };
-		E71F73F61EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageFilterCollectionViewViewModel.h; sourceTree = "<group>"; };
-		E71F73F71EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageFilterCollectionViewViewModel.m; sourceTree = "<group>"; };
-		E71F73F91EBEFEAE00947704 /* HomePageFilterCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageFilterCollectionViewModel.h; sourceTree = "<group>"; };
-		E71F73FA1EBEFEAE00947704 /* HomePageFilterCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageFilterCollectionViewModel.m; sourceTree = "<group>"; };
-		E759DD631EC2233800C4F2EE /* HomePageFilterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageFilterCollectionViewController.h; sourceTree = "<group>"; };
-		E759DD641EC2233800C4F2EE /* HomePageFilterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageFilterCollectionViewController.m; sourceTree = "<group>"; };
-		E759DD671EC228B700C4F2EE /* HomePageRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageRecommendViewController.h; sourceTree = "<group>"; };
-		E759DD681EC228B700C4F2EE /* HomePageRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageRecommendViewController.m; sourceTree = "<group>"; };
-		E759DD6B1EC2295200C4F2EE /* HomePageRecommendViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageRecommendViewModel.h; sourceTree = "<group>"; };
-		E759DD6C1EC2295200C4F2EE /* HomePageRecommendViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageRecommendViewModel.m; sourceTree = "<group>"; };
-		E759DD6E1EC2297500C4F2EE /* HomePageRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageRecommendModel.h; sourceTree = "<group>"; };
-		E759DD6F1EC2297500C4F2EE /* HomePageRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageRecommendModel.m; sourceTree = "<group>"; };
-		E759DD711EC22E9C00C4F2EE /* HomePageRecommendViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageRecommendViewCell.h; sourceTree = "<group>"; };
-		E759DD721EC22E9C00C4F2EE /* HomePageRecommendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageRecommendViewCell.m; sourceTree = "<group>"; };
-		E78AFCA81EBAD61A00A58889 /* MerchantInfoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoListModel.h; sourceTree = "<group>"; };
-		E78AFCA91EBAD61A00A58889 /* MerchantInfoListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoListModel.m; sourceTree = "<group>"; };
-		E78AFCAB1EBAD63F00A58889 /* MerchantInfoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoListViewModel.h; sourceTree = "<group>"; };
-		E78AFCAC1EBAD63F00A58889 /* MerchantInfoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoListViewModel.m; sourceTree = "<group>"; };
-		E78AFCAE1EBAD9A500A58889 /* MerchantInfoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantInfoListTableViewCell.h; sourceTree = "<group>"; };
-		E78AFCAF1EBAD9A500A58889 /* MerchantInfoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantInfoListTableViewCell.m; sourceTree = "<group>"; };
-		E78AFCB31EBBF00400A58889 /* HomePageTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageTableHeaderView.h; sourceTree = "<group>"; };
-		E78AFCB41EBBF00400A58889 /* HomePageTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageTableHeaderView.m; sourceTree = "<group>"; };
-		E7AB3E771EBC891F0028D948 /* CommonHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeader.pch; sourceTree = "<group>"; };
+		E71F73EF1EBEEDE500947704 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
+		E71F73F01EBEEDE500947704 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
+		E71F73F21EBEFC6900947704 /* FMTHomePageFilterCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageFilterCollectionCell.h; sourceTree = "<group>"; };
+		E71F73F31EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageFilterCollectionCell.m; sourceTree = "<group>"; };
+		E71F73F61EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageFilterCollectionViewModel.h; sourceTree = "<group>"; };
+		E71F73F71EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageFilterCollectionViewModel.m; sourceTree = "<group>"; };
+		E71F73F91EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageFilterCollectionModel.h; sourceTree = "<group>"; };
+		E71F73FA1EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageFilterCollectionModel.m; sourceTree = "<group>"; };
+		E759DD631EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageFilterCollectionViewController.h; sourceTree = "<group>"; };
+		E759DD641EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageFilterCollectionViewController.m; sourceTree = "<group>"; };
+		E759DD671EC228B700C4F2EE /* FMTHomePageRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageRecommendViewController.h; sourceTree = "<group>"; };
+		E759DD681EC228B700C4F2EE /* FMTHomePageRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageRecommendViewController.m; sourceTree = "<group>"; };
+		E759DD6B1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageRecommendViewModel.h; sourceTree = "<group>"; };
+		E759DD6C1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageRecommendViewModel.m; sourceTree = "<group>"; };
+		E759DD6E1EC2297500C4F2EE /* FMTHomePageRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageRecommendModel.h; sourceTree = "<group>"; };
+		E759DD6F1EC2297500C4F2EE /* FMTHomePageRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageRecommendModel.m; sourceTree = "<group>"; };
+		E759DD711EC22E9C00C4F2EE /* FMTHomePageRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageRecommendCell.h; sourceTree = "<group>"; };
+		E759DD721EC22E9C00C4F2EE /* FMTHomePageRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageRecommendCell.m; sourceTree = "<group>"; };
+		E78AFCA81EBAD61A00A58889 /* FMTMerchantInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTMerchantInfoModel.h; sourceTree = "<group>"; };
+		E78AFCA91EBAD61A00A58889 /* FMTMerchantInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTMerchantInfoModel.m; sourceTree = "<group>"; };
+		E78AFCAB1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTMerchantInfoListViewModel.h; sourceTree = "<group>"; };
+		E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTMerchantInfoListViewModel.m; sourceTree = "<group>"; };
+		E78AFCAE1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTMerchantInfoListTableViewCell.h; sourceTree = "<group>"; };
+		E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTMerchantInfoListTableViewCell.m; sourceTree = "<group>"; };
+		E78AFCB31EBBF00400A58889 /* FMTHomePageTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageTableHeaderView.h; sourceTree = "<group>"; };
+		E78AFCB41EBBF00400A58889 /* FMTHomePageTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageTableHeaderView.m; sourceTree = "<group>"; };
+		E7AB3E771EBC891F0028D948 /* CommonHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonHeader.pch; path = ../CommonHeader.pch; sourceTree = "<group>"; };
 		E7CA8F371EB9C31A008302A7 /* fangMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fangMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CA8F3B1EB9C31A008302A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7CA8F3D1EB9C31A008302A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7CA8F401EB9C31A008302A7 /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
-		E7CA8F411EB9C31A008302A7 /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		E7CA8F401EB9C31A008302A7 /* FMTHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTHomePageViewController.h; sourceTree = "<group>"; };
+		E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageViewController.m; sourceTree = "<group>"; };
 		E7CA8F441EB9C31A008302A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7CA8F461EB9C31A008302A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CA8F491EB9C31A008302A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		E7CA8F5B1EB9C31A008302A7 /* fangMTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fangMTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CA8F5F1EB9C31A008302A7 /* fangMTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fangMTUITests.m; sourceTree = "<group>"; };
 		E7CA8F611EB9C31A008302A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJChiBaoZiHeader.h; path = fangMT/MJChiBaoZiHeader.h; sourceTree = "<group>"; };
-		E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJChiBaoZiHeader.m; path = fangMT/MJChiBaoZiHeader.m; sourceTree = "<group>"; };
+		E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		E7F567391EC1458300AB78EC /* DOPDropDownMenu1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu1.h; sourceTree = "<group>"; };
 		E7F5673A1EC1458300AB78EC /* DOPDropDownMenu1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,69 +146,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E71F73F51EBEFD5D00947704 /* TableHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				E78AFCB31EBBF00400A58889 /* HomePageTableHeaderView.h */,
-				E78AFCB41EBBF00400A58889 /* HomePageTableHeaderView.m */,
-				E759DD6A1EC228CB00C4F2EE /* RecommendViewController */,
-				E759DD661EC2288500C4F2EE /* FilterViewController */,
-			);
-			name = TableHeaderView;
-			sourceTree = "<group>";
-		};
-		E71F73FC1EBEFF1D00947704 /* MerchantInfoList */ = {
-			isa = PBXGroup;
-			children = (
-				E78AFCA81EBAD61A00A58889 /* MerchantInfoListModel.h */,
-				E78AFCA91EBAD61A00A58889 /* MerchantInfoListModel.m */,
-				E78AFCAB1EBAD63F00A58889 /* MerchantInfoListViewModel.h */,
-				E78AFCAC1EBAD63F00A58889 /* MerchantInfoListViewModel.m */,
-				E78AFCAE1EBAD9A500A58889 /* MerchantInfoListTableViewCell.h */,
-				E78AFCAF1EBAD9A500A58889 /* MerchantInfoListTableViewCell.m */,
-			);
-			name = MerchantInfoList;
-			sourceTree = "<group>";
-		};
-		E759DD661EC2288500C4F2EE /* FilterViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E759DD631EC2233800C4F2EE /* HomePageFilterCollectionViewController.h */,
-				E759DD641EC2233800C4F2EE /* HomePageFilterCollectionViewController.m */,
-				E71F73F21EBEFC6900947704 /* HomePageFilterCollectionViewCell.h */,
-				E71F73F31EBEFC6900947704 /* HomePageFilterCollectionViewCell.m */,
-				E71F73F61EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.h */,
-				E71F73F71EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.m */,
-				E71F73F91EBEFEAE00947704 /* HomePageFilterCollectionViewModel.h */,
-				E71F73FA1EBEFEAE00947704 /* HomePageFilterCollectionViewModel.m */,
-			);
-			name = FilterViewController;
-			sourceTree = "<group>";
-		};
-		E759DD6A1EC228CB00C4F2EE /* RecommendViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E759DD671EC228B700C4F2EE /* HomePageRecommendViewController.h */,
-				E759DD681EC228B700C4F2EE /* HomePageRecommendViewController.m */,
-				E759DD6B1EC2295200C4F2EE /* HomePageRecommendViewModel.h */,
-				E759DD6C1EC2295200C4F2EE /* HomePageRecommendViewModel.m */,
-				E759DD6E1EC2297500C4F2EE /* HomePageRecommendModel.h */,
-				E759DD6F1EC2297500C4F2EE /* HomePageRecommendModel.m */,
-				E759DD711EC22E9C00C4F2EE /* HomePageRecommendViewCell.h */,
-				E759DD721EC22E9C00C4F2EE /* HomePageRecommendViewCell.m */,
-			);
-			name = RecommendViewController;
-			sourceTree = "<group>";
-		};
 		E7CA8F2E1EB9C31A008302A7 = {
 			isa = PBXGroup;
 			children = (
-				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
 				E7CA8F391EB9C31A008302A7 /* fangMT */,
-				E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */,
-				E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */,
-				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
-				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
 				E7CA8F531EB9C31A008302A7 /* fangMTTests */,
 				E7CA8F5E1EB9C31A008302A7 /* fangMTUITests */,
 				E7CA8F381EB9C31A008302A7 /* Products */,
@@ -232,17 +173,44 @@
 			children = (
 				E7CA8F3D1EB9C31A008302A7 /* AppDelegate.h */,
 				E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */,
-				E7CA8F401EB9C31A008302A7 /* HomePageViewController.h */,
-				E7CA8F411EB9C31A008302A7 /* HomePageViewController.m */,
+				E7CA8F401EB9C31A008302A7 /* FMTHomePageViewController.h */,
+				E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */,
+				E78AFCB31EBBF00400A58889 /* FMTHomePageTableHeaderView.h */,
+				E78AFCB41EBBF00400A58889 /* FMTHomePageTableHeaderView.m */,
+				E759DD671EC228B700C4F2EE /* FMTHomePageRecommendViewController.h */,
+				E759DD681EC228B700C4F2EE /* FMTHomePageRecommendViewController.m */,
+				E759DD6B1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.h */,
+				E759DD6C1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.m */,
+				E759DD6E1EC2297500C4F2EE /* FMTHomePageRecommendModel.h */,
+				E759DD6F1EC2297500C4F2EE /* FMTHomePageRecommendModel.m */,
+				E759DD711EC22E9C00C4F2EE /* FMTHomePageRecommendCell.h */,
+				E759DD721EC22E9C00C4F2EE /* FMTHomePageRecommendCell.m */,
+				E759DD631EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.h */,
+				E759DD641EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.m */,
+				E71F73F21EBEFC6900947704 /* FMTHomePageFilterCollectionCell.h */,
+				E71F73F31EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m */,
+				E71F73F61EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.h */,
+				E71F73F71EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m */,
+				E71F73F91EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.h */,
+				E71F73FA1EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.m */,
+				E78AFCA81EBAD61A00A58889 /* FMTMerchantInfoModel.h */,
+				E78AFCA91EBAD61A00A58889 /* FMTMerchantInfoModel.m */,
+				E78AFCAB1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.h */,
+				E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */,
+				E78AFCAE1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.h */,
+				E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */,
 				E7CA8F431EB9C31A008302A7 /* Main.storyboard */,
 				E7CA8F461EB9C31A008302A7 /* Assets.xcassets */,
 				E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */,
 				E7CA8F4B1EB9C31A008302A7 /* Info.plist */,
-				E71F73F51EBEFD5D00947704 /* TableHeaderView */,
-				E71F73FC1EBEFF1D00947704 /* MerchantInfoList */,
 				E7CA8F3A1EB9C31A008302A7 /* Supporting Files */,
 				E7F567391EC1458300AB78EC /* DOPDropDownMenu1.h */,
 				E7F5673A1EC1458300AB78EC /* DOPDropDownMenu1.m */,
+				E7F567321EBF7FDB00AB78EC /* MJChiBaoZiHeader.h */,
+				E7F567331EBF7FDB00AB78EC /* MJChiBaoZiHeader.m */,
+				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
+				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
+				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
 			);
 			path = fangMT;
 			sourceTree = "<group>";
@@ -457,24 +425,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E759DD691EC228B700C4F2EE /* HomePageRecommendViewController.m in Sources */,
-				E759DD701EC2297500C4F2EE /* HomePageRecommendModel.m in Sources */,
+				E759DD691EC228B700C4F2EE /* FMTHomePageRecommendViewController.m in Sources */,
+				E759DD701EC2297500C4F2EE /* FMTHomePageRecommendModel.m in Sources */,
 				E7F567341EBF7FDB00AB78EC /* MJChiBaoZiHeader.m in Sources */,
 				E7F5673B1EC1458300AB78EC /* DOPDropDownMenu1.m in Sources */,
-				E78AFCB01EBAD9A500A58889 /* MerchantInfoListTableViewCell.m in Sources */,
-				E759DD651EC2233800C4F2EE /* HomePageFilterCollectionViewController.m in Sources */,
-				E78AFCB51EBBF00400A58889 /* HomePageTableHeaderView.m in Sources */,
-				E759DD6D1EC2295200C4F2EE /* HomePageRecommendViewModel.m in Sources */,
-				E7CA8F421EB9C31A008302A7 /* HomePageViewController.m in Sources */,
-				E71F73F41EBEFC6900947704 /* HomePageFilterCollectionViewCell.m in Sources */,
-				E71F73F81EBEFDD100947704 /* HomePageFilterCollectionViewViewModel.m in Sources */,
-				E71F73FB1EBEFEAE00947704 /* HomePageFilterCollectionViewModel.m in Sources */,
-				E759DD731EC22E9C00C4F2EE /* HomePageRecommendViewCell.m in Sources */,
+				E78AFCB01EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m in Sources */,
+				E759DD651EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.m in Sources */,
+				E78AFCB51EBBF00400A58889 /* FMTHomePageTableHeaderView.m in Sources */,
+				E759DD6D1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.m in Sources */,
+				E7CA8F421EB9C31A008302A7 /* FMTHomePageViewController.m in Sources */,
+				E71F73F41EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m in Sources */,
+				E71F73F81EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m in Sources */,
+				E71F73FB1EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.m in Sources */,
+				E759DD731EC22E9C00C4F2EE /* FMTHomePageRecommendCell.m in Sources */,
 				E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */,
 				E71F73F11EBEEDE500947704 /* UIView+Border.m in Sources */,
-				E78AFCAD1EBAD63F00A58889 /* MerchantInfoListViewModel.m in Sources */,
+				E78AFCAD1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m in Sources */,
 				E7CA8F3C1EB9C31A008302A7 /* main.m in Sources */,
-				E78AFCAA1EBAD61A00A58889 /* MerchantInfoListModel.m in Sources */,
+				E78AFCAA1EBAD61A00A58889 /* FMTMerchantInfoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,7 +594,8 @@
 			baseConfigurationReference = 73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/rong/Desktop/fangMT/CommonHeader.pch;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CommonHeader.pch";
 				INFOPLIST_FILE = fangMT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cheng.fangMT;
@@ -639,7 +608,8 @@
 			baseConfigurationReference = 28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/rong/Desktop/fangMT/CommonHeader.pch;
+				GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CommonHeader.pch";
 				INFOPLIST_FILE = fangMT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cheng.fangMT;

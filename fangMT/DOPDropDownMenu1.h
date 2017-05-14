@@ -49,10 +49,16 @@
  */
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu1 *)menu;
 
-// 新增 返回 menu 第column列 每行image
+/** 新增
+ *  新增 返回 menu 第column列 每行image
+ *  如果都没有可以不实现该协议
+ */
 - (NSString *)menu:(DOPDropDownMenu1 *)menu imageNameForRowAtIndexPath:(DOPIndexPath1 *)indexPath;
 
-// 新增 detailText ,right text
+/** 新增
+ *  新增 detailText ,right text
+ *  如果都没有可以不实现该协议
+ */
 - (NSString *)menu:(DOPDropDownMenu1 *)menu detailTextForRowAtIndexPath:(DOPIndexPath1 *)indexPath;
 
 /** 新增
@@ -117,6 +123,7 @@
 @property (nonatomic, strong) UIFont *detailTextFont;       // font
 @property (nonatomic, strong) UIColor *separatorColor;      // 分割线颜色
 @property (nonatomic, assign) NSInteger fontSize;           // 字体大小
+
 // 当有二级列表item时，点击row 是否调用点击代理方法
 @property (nonatomic, assign) BOOL isClickHaveItemValid;
 

@@ -1,5 +1,5 @@
 //
-//  MerchantInfoListModel.h
+//  FMTMerchantInfoListModel.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/4.
@@ -8,14 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MerchantInfoListModel : NSObject
+typedef NS_ENUM(NSUInteger, StarLevel) {
+    StarLevelZore,
+    StarLevelOne,
+    StarLevelTwo,
+    StarLevelThree,
+    StarLevelFour,
+    StarLevelFive
+};
+
+@interface FMTMerchantInfoModel : NSObject
 
 @property (nonatomic, copy) NSString *merchantName;
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *otherDescription;
-@property (nonatomic, assign) NSInteger starLevel;
-@property (nonatomic, assign) NSUInteger pricePerPerson;
+@property (nonatomic, assign) StarLevel starLevel;
+@property (nonatomic, assign) NSString *pricePerPerson;
 @property (nonatomic, strong) NSURL *merchantImageURL;
 
 - (instancetype)initWithDic:(NSDictionary *)dic;

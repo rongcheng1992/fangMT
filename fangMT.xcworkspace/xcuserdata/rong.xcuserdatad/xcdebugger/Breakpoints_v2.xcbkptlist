@@ -76,11 +76,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fangMT/HomePageRecommendViewController.m"
-            timestampString = "516241675.255663"
+            timestampString = "516455745.597891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-configRecommendView"
             landmarkType = "7">
          </BreakpointContent>
