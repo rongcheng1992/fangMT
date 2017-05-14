@@ -1,5 +1,5 @@
 //
-//  HomePageRecommendViewModel.h
+//  FMTHomePageRecommendViewModel.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/10.
@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HomePageRecommendViewModel : NSObject
+@interface FMTHomePageRecommendViewModel : NSObject
 
 typedef void (^doingBlcok)(id obj);
 typedef void (^successBlcok)(id obj);
 typedef void (^failureBlcok)(id obj);
 
 - (void)fetchRecommendInfoWithURL:(NSURL *)url
-                            Doing:(doingBlcok)doingBlcok
-                          Success:(successBlcok)successBlcok
-                          Failure:(failureBlcok)failureBlcok;
+                            doing:(doingBlcok)doingBlcok
+                          success:(successBlcok)successBlcok
+                          failure:(failureBlcok)failureBlcok;
 
 @end

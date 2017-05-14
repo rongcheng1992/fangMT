@@ -1,41 +1,40 @@
 //
-//  HomePageRecommendViewController.m
+//  FMTHomePageRecommendViewController.m
 //  fangMT
 //
 //  Created by Rong on 2017/5/10.
 //  Copyright © 2017年 Rong. All rights reserved.
 //
 
-#import "HomePageRecommendViewController.h"
-#import "HomePageRecommendViewModel.h"
-#import "HomePageRecommendModel.h"
-#import "HomePageRecommendViewCell.h"
-#import "UIView+Border.h"
+#import "FMTHomePageRecommendViewController.h"
+#import "FMTHomePageRecommendViewModel.h"
+#import "FMTHomePageRecommendModel.h"
+#import "FMTHomePageRecommendCell.h"
 
-@interface HomePageRecommendViewController ()
+@interface FMTHomePageRecommendViewController ()
 
-@property (nonatomic, strong) HomePageRecommendViewModel *viewModel;
-@property (nonatomic, strong) NSMutableArray *recommendInfoArray;
+@property (nonatomic, strong) FMTHomePageRecommendViewModel *viewModel;
+@property (nonatomic, strong) NSMutableArray<FMTHomePageRecommendModel *> *recommendInfoArray;
 
 @end
 
-@implementation HomePageRecommendViewController
+@implementation FMTHomePageRecommendViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    @weakify(self);
     [self.viewModel fetchRecommendInfoWithURL:[NSURL URLWithString:@"XXX"]
-                                         Doing:^(id obj) {
+                                         doing:^(id obj) {
                                              // 在请求中需要做一些事写在这里
                                          }
-                                       Success:^(id obj) {
+                                       success:^(id obj) {
                                            // 请求成功后,在这将解析的数据存放在_merchantInfoListArray数组中
-                                           _recommendInfoArray = nil;
-                                           //                                           _recommendInfoArray = @[
-                                           //                                                                    ];
+                                           @strongify(self);
+                                           self.recommendInfoArray = nil;
                                        }
-                                       Failure:^(id obj) {
+                                       failure:^(id obj) {
                                            // 请求失败后可以在这里做一些事
                                        }];
 
@@ -60,32 +59,28 @@
 - (void)configRecommendView
 {
     BOOL flip = NO;
-    for (NSUInteger i = 0; i < _recommendInfoArray.count; i ++) {
+    for (NSUInteger i = 0; i < self.recommendInfoArray.count; i ++) {
         CGRect rect;
 
         // 第一行 这里面的数字最好不要直接写上
         if (!flip) {
             if (i == 0) {
-                rect = CGRectMake(0, 0, ScreenWidth / 2., 220.);
+                rect = CGRectMake(0, 0, SCREEN_WIDTH / 2., 220.);
             } else {
-                rect = CGRectMake(ScreenWidth / 2. + (i - 1) * ScreenWidth / 4.,  0, ScreenWidth / 4., 110.);
+                rect = CGRectMake(SCREEN_WIDTH / 2. + (i - 1) * SCREEN_WIDTH / 4.,  0, SCREEN_WIDTH / 4., 110.);
                 
                 flip = (i == 2) ? !flip : flip;
             }
         } else { // 第二行
-            rect = CGRectMake(ScreenWidth / 2. + (i - 3) * ScreenWidth / 4., 110., ScreenWidth / 4., 110.);
+            rect = CGRectMake(SCREEN_WIDTH / 2. + (i - 3) * SCREEN_WIDTH / 4., 110., SCREEN_WIDTH / 4., 110.);
         }
-
-        HomePageRecommendViewCell *cell = [[HomePageRecommendViewCell alloc] initWithFrame:rect];
         
-        [cell addTopBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
-        [cell addBottomBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
-        [cell addLeftBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
-        [cell addRightBorderWithColor:[UIColor lightGrayColor] andWidth:0.5];
+        FMTHomePageRecommendCell *cell = [[FMTHomePageRecommendCell alloc] initWithFrame:rect];
+        [cell addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderDirection:UIViewBorderDirectionTop | UIViewBorderDirectionBottom | UIViewBorderDirectionLeft | UIViewBorderDirectionRight];
 
         cell.isPositonMiddle = i;
         
-        HomePageRecommendViewModel *model = [_recommendInfoArray objectAtIndex:i];
+        FMTHomePageRecommendModel *model = [self.recommendInfoArray objectAtIndex:i];
         [cell configViewWithModel:model];
         
         [self.view addSubview:cell];
@@ -118,16 +113,16 @@
                          @"detailDes":@""}];
     
     for (NSDictionary *dic in array) {
-        HomePageRecommendModel *model = [[HomePageRecommendModel alloc] initWithDic:dic];
+        FMTHomePageRecommendModel *model = [[FMTHomePageRecommendModel alloc] initWithDic:dic];
         [self.recommendInfoArray addObject:model];
     }
     
     return ;
 }
 
-- (void)configRecommendViewPositionY:(CGFloat)y Height:(CGFloat)recommendViewHeight
+- (void)configRecommendViewPositionY:(CGFloat)y height:(CGFloat)recommendViewHeight
 {
-    self.view.frame = CGRectMake(0, y, ScreenWidth, recommendViewHeight);
+    self.view.frame = CGRectMake(0, y, SCREEN_WIDTH, recommendViewHeight);
 }
 
 @end

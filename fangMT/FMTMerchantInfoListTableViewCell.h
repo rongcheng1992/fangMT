@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class MerchantInfoListModel;
+@class FMTMerchantInfoModel;
 
-@interface MerchantInfoListTableViewCell : UITableViewCell
+@interface FMTMerchantInfoListTableViewCell : UITableViewCell
 
-- (void)ConfigCellWithMerchantInfoListModel:(MerchantInfoListModel *)model;
+- (void)configCellWithMerchantInfoListModel:(FMTMerchantInfoModel *)model;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  MerchantInfoListViewModel.h
+//  FMTMerchantInfoListViewModel.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/4.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MerchantInfoListViewModel : NSObject
+@interface FMTMerchantInfoListViewModel : NSObject
 
 typedef void (^doingBlcok)(id obj);
 typedef void (^successBlcok)(id obj);
 typedef void (^failureBlcok)(id obj);
 
 - (void)fetchMerchantInfoListWithURL:(NSURL *)url
-                               Doing:(doingBlcok)doingBlcok
-                               Success:(successBlcok)successBlcok
-                               Failure:(failureBlcok)failureBlcok;
+                               doing:(doingBlcok)doingBlcok
+                               success:(successBlcok)successBlcok
+                               failure:(failureBlcok)failureBlcok;
 @end

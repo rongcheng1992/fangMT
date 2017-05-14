@@ -1,5 +1,5 @@
 //
-//  HomePageRecommendViewCell.h
+//  FMTHomePageRecommendCell.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/10.
@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class HomePageRecommendViewModel;
+@class FMTHomePageRecommendModel;
 
-@interface HomePageRecommendViewCell : UIView
+@interface FMTHomePageRecommendCell : UIView
 
 @property (nonatomic, assign) BOOL isPositonMiddle;
 
-- (void)configViewWithModel:(HomePageRecommendViewModel *)model;
+- (void)configViewWithModel:(FMTHomePageRecommendModel *)model;
 
 @end

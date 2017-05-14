@@ -1,5 +1,5 @@
 //
-//  HomePageViewController.h
+//  FMTHomePageViewController.h
 //  fangMT
 //
 //  Created by Rong on 2017/5/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomePageViewController : UIViewController
+@interface FMTHomePageViewController : UIViewController
 
 @end
 

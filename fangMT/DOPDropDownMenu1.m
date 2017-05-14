@@ -70,8 +70,6 @@
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
 
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 #define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
 #define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
 
@@ -374,9 +372,6 @@
         UIGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped:)];
         [_backGroundView addGestureRecognizer:gesture];
         
-        UIGestureRecognizer *scrollGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundSwiped:)];
-        [_backGroundView addGestureRecognizer:scrollGesture];
-        
         //add bottom shadow
         UIView *bottomShadow = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height-0.5, screenSize.width, 0.5)];
         bottomShadow.backgroundColor = kSeparatorColor;
@@ -560,7 +555,7 @@
             view.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.3];
         }];
         
-        _popWillShowBlock();
+        self.popWillShowBlock();
     } else {
         [UIView animateWithDuration:0.2 animations:^{
             view.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.0];
@@ -568,7 +563,7 @@
             [view removeFromSuperview];
         }];
         
-        _popWillHideBlock();
+        self.popWillHideBlock();
     }
     
     complete();
