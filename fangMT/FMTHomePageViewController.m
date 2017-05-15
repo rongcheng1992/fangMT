@@ -38,7 +38,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) FMTMerchantInfoListViewModel *merchantInfoListViewModel;
 @property (nonatomic, strong) DOPDropDownMenu1 *dropDownMenu;
-@property (nonatomic, strong) NSMutableArray<FMTMerchantInfoModel *> *merchantInfoListArray;
+@property (nonatomic, strong) NSMutableArray<FMTMerchantInfoModel *> *merchantInfoArray;
 
 @property (nonatomic, copy) NSArray<NSString *> *classifys;
 @property (nonatomic, copy) NSArray<NSString *> *cates;
@@ -73,7 +73,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
                                                          success:^(id obj) {
                                                              // 请求成功后,在这将解析的数据存放在_merchantInfoListArray数组中
                                                              @strongify(self);
-                                                             self.merchantInfoListArray = nil;
+                                                             self.merchantInfoArray = nil;
                                                          }
                                                          failure:^(id obj) {
                                                              // 请求失败后可以在这里做一些事
@@ -125,13 +125,13 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     return _merchantInfoListViewModel;
 }
 
-- (NSMutableArray *)merchantInfoListArray
+- (NSMutableArray *)merchantInfoArray
 {
-    if (!_merchantInfoListArray) {
-        _merchantInfoListArray = [NSMutableArray array];
+    if (!_merchantInfoArray) {
+        _merchantInfoArray = [NSMutableArray array];
     }
     
-    return _merchantInfoListArray;
+    return _merchantInfoArray;
 }
 
 - (DOPDropDownMenu1 *)dropDownMenu
@@ -191,7 +191,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.merchantInfoListArray count];
+    return [self.merchantInfoArray count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -202,7 +202,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FMTMerchantInfoListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellIdentifier forIndexPath:indexPath];
-    FMTMerchantInfoModel *merchantInfoListModel = [self.merchantInfoListArray objectAtIndex:indexPath.row];
+    FMTMerchantInfoModel *merchantInfoListModel = [self.merchantInfoArray objectAtIndex:indexPath.row];
     [cell configCellWithMerchantInfoListModel:merchantInfoListModel];
     
     return cell;
@@ -328,7 +328,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     
     for (NSUInteger i = 0; i < 15; i ++) {
         FMTMerchantInfoModel *model = [[FMTMerchantInfoModel alloc] initWithDic:dic];
-        [self.merchantInfoListArray addObject:model];
+        [self.merchantInfoArray addObject:model];
     }
 }
 
@@ -399,9 +399,9 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     
     if (row == FMTHomePageFilterCategoryAllDetailMeishi) {
         return self.cates.count;
-    } else if (row == FMTHomePageFilterCategoryAllDetailMovie){
+    } else if (row == FMTHomePageFilterCategoryAllDetailMovie) {
         return self.movices.count;
-    } else if (row == FMTHomePageFilterCategoryAllDetailHotel){
+    } else if (row == FMTHomePageFilterCategoryAllDetailHotel) {
         return self.hostels.count;
     } else {
         return 0;
@@ -416,9 +416,9 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     
     if (indexPath.row == FMTHomePageFilterCategoryAllDetailMeishi) {
         return self.cates[indexPath.item];
-    } else if (indexPath.row == FMTHomePageFilterCategoryAllDetailMovie){
+    } else if (indexPath.row == FMTHomePageFilterCategoryAllDetailMovie) {
         return self.movices[indexPath.item];
-    } else if (indexPath.row == FMTHomePageFilterCategoryAllDetailHotel){
+    } else if (indexPath.row == FMTHomePageFilterCategoryAllDetailHotel) {
         return self.hostels[indexPath.item];
     } else {
         return nil;
