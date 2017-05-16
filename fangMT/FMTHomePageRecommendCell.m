@@ -46,7 +46,7 @@
             make.height.mas_equalTo(0.01);
         }];
         
-        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.subTitleLabel.mas_bottom).offset(5.);
             make.leading.equalTo(self.mainTitleLabel.mas_leading);
             make.trailing.equalTo(self.mainTitleLabel.mas_trailing);
@@ -66,7 +66,7 @@
     self.mainTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.mainTitleLabel.text = @"--";
     self.mainTitleLabel.textAlignment = NSTextAlignmentCenter;
-    [self.mainTitleLabel setFont:[UIFont boldSystemFontOfSize:14.]];
+    [self.mainTitleLabel setFont:[UIFont boldSystemFontOfSize:13.]];
     
     self.subTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.subTitleLabel.text = @"--";
@@ -81,7 +81,7 @@
         [self.desLabel setFont:[UIFont systemFontOfSize:11.]];
         [self.desLabel setTextColor:[UIColor grayColor]];
         
-        [self addSubview:_desLabel];
+        [self addSubview:self.desLabel];
     }
     
     [self addSubview:self.imageView];

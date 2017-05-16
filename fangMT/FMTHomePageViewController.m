@@ -225,27 +225,23 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 - (void)loadMoreData
  {
-    // 模拟1秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    __weak UITableView *tableView = self.tableView;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 刷新表格
-        [tableView reloadData];
+        [self.tableView reloadData];
         
         // 拿到当前的上拉刷新控件，变为没有更多数据的状态
-        [tableView.mj_footer endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     });
 }
 
 - (void)loadNewData
 {
-    // 模拟1秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
-    __weak UITableView *tableView = self.tableView;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // 刷新表格
-        [tableView reloadData];
+        [self.tableView reloadData];
         
         // 拿到当前的下拉刷新控件，结束刷新状态
-        [tableView.mj_header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     });
 }
 
