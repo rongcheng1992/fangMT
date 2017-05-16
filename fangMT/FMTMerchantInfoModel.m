@@ -14,7 +14,7 @@
 {
     if (self = [super init]) {
         self.merchantImageURL = (dic[@"merchantImageURL"] && [dic[@"merchantImageURL"] isKindOfClass:[NSURL class]]) ? dic[@"imageName"] : [[NSURL alloc] initWithString:@"pizza"];
-        self.starLevel = dic[@"starLevel"] ? [dic[@"starLevel"] integerValue] : StarLevelZore;
+        self.starLevel = dic[@"starLevel"] ? [dic[@"starLevel"] integerValue] : FMTMerchantStarLevelZore;
         self.merchantName = (dic[@"merchantName"] && [dic[@"merchantName"] isKindOfClass:[NSString class]]) ? dic[@"merchantName"] : @"默认";
         self.pricePerPerson = (dic[@"pricePerPerson"]  && [dic[@"pricePerPerson"] isKindOfClass:[NSString class]]) ? dic[@"pricePerPerson"] : @"默认";
         self.address = (dic[@"address"] && [dic[@"address"] isKindOfClass:[NSString class]]) ? dic[@"address"] : @"默认";

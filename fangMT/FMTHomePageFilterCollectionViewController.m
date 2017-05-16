@@ -121,7 +121,6 @@ static NSString *const kCollectionViewCellIdentifier = @"kCollectionViewCellIden
         layout.itemSize = CGSizeMake(SCREEN_WIDTH/4., 100.);
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         
-        
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
         _collectionView.backgroundColor = [UIColor whiteColor];
     }

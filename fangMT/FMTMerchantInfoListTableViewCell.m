@@ -147,25 +147,25 @@
     }];
 }
 
-- (UIImage *)starImageForLevel:(NSUInteger)level {
+- (UIImage *)starImageForLevel:(FMTMerchantStarLevel)level {
     UIImage *image = nil;
     switch (level) {
-        case StarLevelZore:
+        case FMTMerchantStarLevelZore:
             // image =
             break;
-        case StarLevelOne:
+        case FMTMerchantStarLevelOne:
             // image =
             break;
-        case StarLevelTwo:
+        case FMTMerchantStarLevelTwo:
             // image =
             break;
-        case StarLevelThree:
+        case FMTMerchantStarLevelThree:
             // image =
             break;
-        case StarLevelFour:
+        case FMTMerchantStarLevelFour:
             // image =
             break;
-        case StarLevelFive:
+        case FMTMerchantStarLevelFive:
             // image =
             break;
     }

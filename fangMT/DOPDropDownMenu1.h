@@ -94,7 +94,7 @@
 /**
  *  点击代理，点击了第column
  */
-- (void)menu:(DOPDropDownMenu1 *)menu didSelectColumn:(NSUInteger)column;
+- (void)menu:(DOPDropDownMenu1 *)menu didSelectColumn:(NSInteger)column;
 
 /**
  *  点击代理，点击了第column 第row 或者item项，如果 item >=0

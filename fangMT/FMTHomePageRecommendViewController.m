@@ -14,7 +14,7 @@
 @interface FMTHomePageRecommendViewController ()
 
 @property (nonatomic, strong) FMTHomePageRecommendViewModel *viewModel;
-@property (nonatomic, strong) NSMutableArray<FMTHomePageRecommendModel *> *recommendInfoArray;
+@property (nonatomic, strong) NSMutableArray *recommendInfoArray;
 
 @end
 
@@ -37,7 +37,7 @@
                                        failure:^(id obj) {
                                            // 请求失败后可以在这里做一些事
                                        }];
-
+    
     [self mockData];
     
     [self configRecommendView];
@@ -62,7 +62,7 @@
     for (NSUInteger i = 0; i < self.recommendInfoArray.count; i ++) {
         CGRect rect;
 
-        // 第一行 这里面的数字最好不要直接写上
+        // TODO:去掉数字
         if (!flip) {
             if (i == 0) {
                 rect = CGRectMake(0, 0, SCREEN_WIDTH / 2., 220.);
@@ -71,7 +71,8 @@
                 
                 flip = (i == 2) ? !flip : flip;
             }
-        } else { // 第二行
+        } else {
+            // 第二行
             rect = CGRectMake(SCREEN_WIDTH / 2. + (i - 3) * SCREEN_WIDTH / 4., 110., SCREEN_WIDTH / 4., 110.);
         }
         

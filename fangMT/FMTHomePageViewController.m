@@ -182,7 +182,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO
+    // TODO:
     
     NSLog(@"tableView--%ld--%ld",(long)indexPath.section, (long)indexPath.row);
 }
@@ -385,7 +385,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 {
     if (indexPath.column == FMTHomePageFilterCategoryAll || indexPath.column == FMTHomePageFilterCategoryDistance) {
         
-        return [NSString stringWithFormat:@"ic_filter_category_%ld", indexPath.row];
+        return [NSString stringWithFormat:@"ic_filter_category_%ld", (long)indexPath.row];
     }
     
     return nil;
@@ -428,7 +428,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 - (NSString *)menu:(DOPDropDownMenu1 *)menu detailTextForRowAtIndexPath:(DOPIndexPath1 *)indexPath
 {
     if (indexPath.column < 2) {
-        return [@(arc4random()%1000) stringValue];
+        return [@(arc4random() % 1000) stringValue];
     }
     
     return nil;
@@ -436,22 +436,22 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 - (NSString *)menu:(DOPDropDownMenu1 *)menu detailTextForItemsInRowAtIndexPath:(DOPIndexPath1 *)indexPath
 {
-    return [@(arc4random()%1000) stringValue];
+    return [@(arc4random() % 1000) stringValue];
 }
 
 #pragma mark - DOPDropDownMenuDelegate
 
-- (void)menu:(DOPDropDownMenu1 *)menu didSelectColumn:(NSUInteger)column
+- (void)menu:(DOPDropDownMenu1 *)menu didSelectColumn:(NSInteger)column
 {
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
     
-    NSLog(@"I select column--%ld ", column);
+    NSLog(@"I select column--%ld ", (long)column);
 }
 
 - (void)menu:(DOPDropDownMenu1 *)menu didSelectRowAtIndexPath:(DOPIndexPath1 *)indexPath
 {
-    NSLog(@"I select %ld--%ld--%ld ", indexPath.column, indexPath.row, indexPath.item);
+    NSLog(@"I select %ld--%ld--%ld ", (long)indexPath.column, (long)indexPath.row, (long)indexPath.item);
 }
 
 #pragma mark - button target

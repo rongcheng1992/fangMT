@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, StarLevel) {
-    StarLevelZore,
-    StarLevelOne,
-    StarLevelTwo,
-    StarLevelThree,
-    StarLevelFour,
-    StarLevelFive
+typedef NS_ENUM(NSUInteger, FMTMerchantStarLevel) {
+    FMTMerchantStarLevelZore,
+    FMTMerchantStarLevelOne,
+    FMTMerchantStarLevelTwo,
+    FMTMerchantStarLevelThree,
+    FMTMerchantStarLevelFour,
+    FMTMerchantStarLevelFive
 };
 
 @interface FMTMerchantInfoModel : NSObject
@@ -23,7 +23,7 @@ typedef NS_ENUM(NSUInteger, StarLevel) {
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *otherDescription;
-@property (nonatomic, assign) StarLevel starLevel;
+@property (nonatomic, assign) FMTMerchantStarLevel starLevel;
 @property (nonatomic, assign) NSString *pricePerPerson;
 @property (nonatomic, strong) NSURL *merchantImageURL;
 

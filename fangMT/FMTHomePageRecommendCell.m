@@ -31,16 +31,28 @@
 
 - (void)configViewWithModel:(FMTHomePageRecommendModel *)model
 {
-    NSTextAlignment alignment = _isPositonMiddle ? NSTextAlignmentCenter : NSTextAlignmentLeft;
+    NSTextAlignment alignment = self.isPositonMiddle ? NSTextAlignmentCenter : NSTextAlignmentLeft;
     
     self.imageView.image = [UIImage imageNamed:model.imageName];
     self.mainTitleLabel.text = model.mainTitle;
     self.mainTitleLabel.textAlignment = alignment;
-
     self.desLabel.text = model.detailDes;
-    
     self.subTitleLabel.text = model.subTitle;
     self.subTitleLabel.textAlignment = alignment;
+    
+    // 更新约束
+    if (self.isPositonMiddle) {
+        [self.desLabel mas_remakeConstraints:^(MASConstraintMaker *make){
+            make.height.mas_equalTo(0.01);
+        }];
+        
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.subTitleLabel.mas_bottom).offset(5.);
+            make.leading.equalTo(self.mainTitleLabel.mas_leading);
+            make.trailing.equalTo(self.mainTitleLabel.mas_trailing);
+            make.bottom.equalTo(self.mas_bottom).offset(-5.);
+        }];
+    }
 }
 
 #pragma mark - helper method
