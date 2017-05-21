@@ -14,6 +14,8 @@
 #import "MJChiBaoZiHeader.h"
 #import "DOPDropDownMenu1.h"
 
+#import "FMTMerchantDetailViewController.h"
+
 typedef NS_ENUM(NSUInteger, FMTHomePageFilterCategory) {
     FMTHomePageFilterCategoryAll,
     FMTHomePageFilterCategoryDistance,
@@ -52,8 +54,55 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 @implementation FMTHomePageViewController
 
+-(instancetype)init {
+    if (self = [super init]) {
+        
+    }
+    
+    return self;
+}
+
+-(void)loadView {
+    UIView *test = [[UIView alloc] init];
+    self.view = test;
+}
+
++(void)initialize {
+    
+    NSLog(@"");
+}
+
++(void)load {
+
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+-(void)dealloc {
+    NSLog(@"FMTHomePageViewController dealloc.\n");
+}
+
+-(void)viewWillLayoutSubviews {
+
+}
+
+-(void)viewDidLayoutSubviews {
+
+}
+
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     [self configNavigationBar];
 
@@ -182,9 +231,8 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO:
-    
-    NSLog(@"tableView--%ld--%ld",(long)indexPath.section, (long)indexPath.row);
+    FMTMerchantDetailViewController *vc  = [[FMTMerchantDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UITableviewDataSource

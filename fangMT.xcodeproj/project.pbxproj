@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D2334FB13709FD0E99709E2 /* Pods_fangMT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC298A2CBAC626D63C13B815 /* Pods_fangMT.framework */; };
+		E71497F21ECAEE3300D817C8 /* FMTMerchantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71497F11ECAEE3300D817C8 /* FMTMerchantDetailViewController.m */; };
 		E71F73F11EBEEDE500947704 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F01EBEEDE500947704 /* UIView+Border.m */; };
 		E71F73F41EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F31EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m */; };
 		E71F73F81EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F73F71EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m */; };
@@ -24,7 +25,6 @@
 		E7CA8F3C1EB9C31A008302A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3B1EB9C31A008302A7 /* main.m */; };
 		E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */; };
 		E7CA8F421EB9C31A008302A7 /* FMTHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */; };
-		E7CA8F451EB9C31A008302A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F431EB9C31A008302A7 /* Main.storyboard */; };
 		E7CA8F471EB9C31A008302A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F461EB9C31A008302A7 /* Assets.xcassets */; };
 		E7CA8F4A1EB9C31A008302A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */; };
 		E7CA8F551EB9C31A008302A7 /* fangMTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F541EB9C31A008302A7 /* fangMTTests.m */; };
@@ -54,6 +54,8 @@
 		28BE4439AD234E696C02332B /* Pods-fangMT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.release.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.release.xcconfig"; sourceTree = "<group>"; };
 		73078405244DF39C152B10EE /* Pods-fangMT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fangMT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fangMT/Pods-fangMT.debug.xcconfig"; sourceTree = "<group>"; };
 		AC298A2CBAC626D63C13B815 /* Pods_fangMT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fangMT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E71497F01ECAEE3300D817C8 /* FMTMerchantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTMerchantDetailViewController.h; sourceTree = "<group>"; };
+		E71497F11ECAEE3300D817C8 /* FMTMerchantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTMerchantDetailViewController.m; sourceTree = "<group>"; };
 		E71F73EF1EBEEDE500947704 /* UIView+Border.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Border.h"; sourceTree = "<group>"; };
 		E71F73F01EBEEDE500947704 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
 		E71F73F21EBEFC6900947704 /* FMTHomePageFilterCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageFilterCollectionCell.h; sourceTree = "<group>"; };
@@ -87,7 +89,6 @@
 		E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E7CA8F401EB9C31A008302A7 /* FMTHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTHomePageViewController.h; sourceTree = "<group>"; };
 		E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageViewController.m; sourceTree = "<group>"; };
-		E7CA8F441EB9C31A008302A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7CA8F461EB9C31A008302A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CA8F491EB9C31A008302A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7CA8F4B1EB9C31A008302A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,7 +200,6 @@
 				E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */,
 				E78AFCAE1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.h */,
 				E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */,
-				E7CA8F431EB9C31A008302A7 /* Main.storyboard */,
 				E7CA8F461EB9C31A008302A7 /* Assets.xcassets */,
 				E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */,
 				E7CA8F4B1EB9C31A008302A7 /* Info.plist */,
@@ -211,6 +211,8 @@
 				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
 				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
 				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
+				E71497F01ECAEE3300D817C8 /* FMTMerchantDetailViewController.h */,
+				E71497F11ECAEE3300D817C8 /* FMTMerchantDetailViewController.m */,
 			);
 			path = fangMT;
 			sourceTree = "<group>";
@@ -352,7 +354,6 @@
 			files = (
 				E7CA8F4A1EB9C31A008302A7 /* LaunchScreen.storyboard in Resources */,
 				E7CA8F471EB9C31A008302A7 /* Assets.xcassets in Resources */,
-				E7CA8F451EB9C31A008302A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +437,7 @@
 				E7CA8F421EB9C31A008302A7 /* FMTHomePageViewController.m in Sources */,
 				E71F73F41EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m in Sources */,
 				E71F73F81EBEFDD100947704 /* FMTHomePageFilterCollectionViewModel.m in Sources */,
+				E71497F21ECAEE3300D817C8 /* FMTMerchantDetailViewController.m in Sources */,
 				E71F73FB1EBEFEAE00947704 /* FMTHomePageFilterCollectionModel.m in Sources */,
 				E759DD731EC22E9C00C4F2EE /* FMTHomePageRecommendCell.m in Sources */,
 				E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */,
@@ -478,14 +480,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E7CA8F431EB9C31A008302A7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7CA8F441EB9C31A008302A7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
