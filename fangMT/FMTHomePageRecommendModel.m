@@ -13,7 +13,6 @@
 - (instancetype)initWithDic:(NSDictionary *)dic
 {
     if (self = [super init]) {
-        self.mainTitle = NULL;
         self.mainTitle = (dic[@"mainTitle"] && [dic[@"mainTitle"] isKindOfClass:[NSString class]]) ? dic[@"mainTitle"] : @"默认";
         self.subTitle = (dic[@"subTitle"] && [dic[@"subTitle"] isKindOfClass:[NSString class]]) ? dic[@"subTitle"] : @"默认";
         self.imageName = (dic[@"imageName"] && [dic[@"imageName"] isKindOfClass:[NSString class]]) ? dic[@"imageName"] : @"默认";
