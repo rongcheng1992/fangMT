@@ -77,7 +77,7 @@
         }
         
         FMTHomePageRecommendCell *cell = [[FMTHomePageRecommendCell alloc] initWithFrame:rect];
-        [cell addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderDirection:UIViewBorderDirectionTop | UIViewBorderDirectionBottom | UIViewBorderDirectionLeft | UIViewBorderDirectionRight];
+        [cell addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderType:UIViewBorderTypeTop | UIViewBorderTypeBottom | UIViewBorderTypeLeft | UIViewBorderTypeRight];
 
         cell.isPositonMiddle = i;
         

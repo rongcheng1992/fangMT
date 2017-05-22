@@ -54,55 +54,8 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 @implementation FMTHomePageViewController
 
--(instancetype)init {
-    if (self = [super init]) {
-        
-    }
-    
-    return self;
-}
-
--(void)loadView {
-    UIView *test = [[UIView alloc] init];
-    self.view = test;
-}
-
-+(void)initialize {
-    
-    NSLog(@"");
-}
-
-+(void)load {
-
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
--(void)dealloc {
-    NSLog(@"FMTHomePageViewController dealloc.\n");
-}
-
--(void)viewWillLayoutSubviews {
-
-}
-
--(void)viewDidLayoutSubviews {
-
-}
-
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     [self configNavigationBar];
 
@@ -159,7 +112,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 {
     if (!_headerView) {
         _headerView = [[FMTHomePageTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, tableViewHeaderViewHeight)];
-        [_headerView addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderDirection:UIViewBorderDirectionTop];
+        [_headerView addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderType:UIViewBorderTypeTop];
     }
     
     return _headerView;
@@ -187,7 +140,7 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 {
     if (!_dropDownMenu) {
         _dropDownMenu = [[DOPDropDownMenu1 alloc] initWithOrigin:CGPointMake(0, tableViewHeaderViewHeight) andHeight:44.];
-        [_dropDownMenu addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderDirection:UIViewBorderDirectionTop];
+        [_dropDownMenu addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderType:UIViewBorderTypeTop];
         _dropDownMenu.dataSource = self;
         _dropDownMenu.delegate = self;
         

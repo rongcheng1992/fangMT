@@ -7,64 +7,85 @@
 //
 
 #import "UIView+Border.h"
+#import "Masonry.h"
 
-#define ViewHeight self.frame.size.height
-#define ViewWidth self.frame.size.width
+#define VIEWHEIGHT self.frame.size.height
+#define VIEWWIDTH self.frame.size.width
 
 @implementation UIView (Border)
 
-- (void)addBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth  boderDirection:(UIViewBorderDirection)direction {
-    if (direction & UIViewBorderDirectionTop) {
+#pragma mark -- public methods
+
+- (void)addBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth boderType:(UIViewBorderType)type {
+    if (type & UIViewBorderTypeTop) {
         [self addTopBorderWithColor:color width:borderWidth];
     }
     
-    if (direction & UIViewBorderDirectionBottom) {
+    if (type & UIViewBorderTypeBottom) {
         [self addBottomBorderWithColor:color width:borderWidth];
     }
     
-    if (direction & UIViewBorderDirectionLeft) {
+    if (type & UIViewBorderTypeLeft) {
         [self addLeftBorderWithColor:color width:borderWidth];
     }
     
-    if (direction & UIViewBorderDirectionRight) {
+    if (type & UIViewBorderTypeRight) {
         [self addRightBorderWithColor:color width:borderWidth];
     }
 }
 
+#pragma mark -- private methods
+
 - (void)addBottomBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth
 {
-    CALayer *border = [CALayer layer];
-    border.backgroundColor = color.CGColor;
-    border.frame = CGRectMake(0, ViewHeight - borderWidth, ViewWidth, borderWidth);
-    [self.layer addSublayer:border];
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = color;
+    [self addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.mas_bottom);
+        make.leading.equalTo(self.mas_leading);
+        make.trailing.equalTo(self.mas_trailing);
+        make.height.mas_equalTo(borderWidth);
+    }];
 }
 
 - (void)addTopBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth
 {
-    CALayer *border = [CALayer layer];
-    border.backgroundColor = color.CGColor;
-    
-    border.frame = CGRectMake(0, 0, ViewWidth, borderWidth);
-    [self.layer addSublayer:border];
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = color;
+    [self addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_top);
+        make.leading.equalTo(self.mas_leading);
+        make.trailing.equalTo(self.mas_trailing);
+        make.height.mas_equalTo(borderWidth);
+    }];
 }
 
 - (void)addLeftBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth
 {
-    CALayer *border = [CALayer layer];
-    border.backgroundColor = color.CGColor;
-    
-    border.frame = CGRectMake(0, 0, borderWidth, ViewHeight);
-    [self.layer addSublayer:border];
-
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = color;
+    [self addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.mas_bottom);
+        make.leading.equalTo(self.mas_leading);
+        make.top.equalTo(self.mas_top);
+        make.width.mas_equalTo(borderWidth);
+    }];
 }
 
 - (void)addRightBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth
 {
-    CALayer *border = [CALayer layer];
-    border.backgroundColor = color.CGColor;
-    
-    border.frame = CGRectMake(ViewWidth - borderWidth, 0, borderWidth, ViewHeight);
-    [self.layer addSublayer:border];
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = color;
+    [self addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.mas_bottom);
+        make.top.equalTo(self.mas_top);
+        make.trailing.equalTo(self.mas_trailing);
+        make.width.mas_equalTo(borderWidth);
+    }];
 }
 
 @end

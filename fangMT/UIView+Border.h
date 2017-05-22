@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_OPTIONS(NSUInteger, UIViewBorderDirection) {
-    UIViewBorderDirectionLeft   = 1 << 0,
-    UIViewBorderDirectionRight  = 1 << 1,
-    UIViewBorderDirectionTop    = 1 << 2,
-    UIViewBorderDirectionBottom = 1 << 3
+typedef NS_OPTIONS(NSUInteger, UIViewBorderType) {
+    UIViewBorderTypeLeft   = 1 << 0,
+    UIViewBorderTypeRight  = 1 << 1,
+    UIViewBorderTypeTop    = 1 << 2,
+    UIViewBorderTypeBottom = 1 << 3
 };
 
 @interface UIView (Border)
 
-- (void)addBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth  boderDirection:(UIViewBorderDirection)direction;
+- (void)addBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth boderType:(UIViewBorderType)type;
 
 @end

@@ -200,6 +200,8 @@
 				E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */,
 				E78AFCAE1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.h */,
 				E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */,
+				E71497F01ECAEE3300D817C8 /* FMTMerchantDetailViewController.h */,
+				E71497F11ECAEE3300D817C8 /* FMTMerchantDetailViewController.m */,
 				E7CA8F461EB9C31A008302A7 /* Assets.xcassets */,
 				E7CA8F481EB9C31A008302A7 /* LaunchScreen.storyboard */,
 				E7CA8F4B1EB9C31A008302A7 /* Info.plist */,
@@ -211,8 +213,6 @@
 				E71F73EF1EBEEDE500947704 /* UIView+Border.h */,
 				E71F73F01EBEEDE500947704 /* UIView+Border.m */,
 				E7AB3E771EBC891F0028D948 /* CommonHeader.pch */,
-				E71497F01ECAEE3300D817C8 /* FMTMerchantDetailViewController.h */,
-				E71497F11ECAEE3300D817C8 /* FMTMerchantDetailViewController.m */,
 			);
 			path = fangMT;
 			sourceTree = "<group>";
