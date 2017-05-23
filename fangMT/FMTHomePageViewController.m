@@ -8,12 +8,12 @@
 
 #import "FMTHomePageViewController.h"
 #import "FMTMerchantInfoListTableViewCell.h"
-#import "FMTHomePageTableHeaderView.h"
 #import "FMTMerchantInfoModel.h"
 #import "FMTMerchantInfoListViewModel.h"
 #import "MJChiBaoZiHeader.h"
 #import "DOPDropDownMenu1.h"
-
+#import "FMTHomePageFilterCollectionViewController.h"
+#import "FMTHomePageRecommendViewController.h"
 #import "FMTMerchantDetailViewController.h"
 
 typedef NS_ENUM(NSUInteger, FMTHomePageFilterCategory) {
@@ -30,13 +30,16 @@ typedef NS_ENUM(NSUInteger, FMTHomePageFilterCategoryAllDetail) {
     FMTHomePageFilterCategoryAllDetailHotel
 };
 
-static NSString *const kTableViewCellIdentifier = @"tableViewCellIdentifier";
+static const NSInteger RecommendViewHeight = 220.;
+static const NSInteger FilterCollectionViewHeight = 220.;
+
+static NSString *const kTableViewCellIdentifier = @"kTableViewCellIdentifier";
 
 static const NSUInteger tableViewHeaderViewHeight = 480.;
 
 @interface FMTHomePageViewController () <UITableViewDelegate, UITableViewDataSource, DOPDropDownMenuDelegate, DOPDropDownMenuDataSource>
 
-@property (nonatomic, strong) FMTHomePageTableHeaderView *headerView;
+@property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) FMTMerchantInfoListViewModel *merchantInfoListViewModel;
 @property (nonatomic, strong) DOPDropDownMenu1 *dropDownMenu;
@@ -49,6 +52,10 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
 @property (nonatomic, copy) NSArray<NSString *> *areas;
 @property (nonatomic, copy) NSArray<NSString *> *sorts;
 @property (nonatomic, copy) NSArray<NSString *> *filters;
+
+@property (nonatomic, strong) FMTHomePageFilterCollectionViewController *filterCollectionViewController;
+@property (nonatomic, strong) FMTHomePageRecommendViewController *recommendViewController;
+
 
 @end
 
@@ -64,8 +71,12 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    [self configTableViewHeaderView];
     self.tableView.tableHeaderView = self.headerView;
+    
     [self.tableView registerClass:[FMTMerchantInfoListTableViewCell class] forCellReuseIdentifier:kTableViewCellIdentifier];
+    [self configTableViewHeaderAndFooter];
     
     @weakify(self);
     [self.merchantInfoListViewModel fetchMerchantInfoListWithURL:[NSURL URLWithString:@"XXX"]
@@ -108,10 +119,10 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     return _tableView;
 }
 
-- (FMTHomePageTableHeaderView *)headerView
+- (UIView *)headerView
 {
     if (!_headerView) {
-        _headerView = [[FMTHomePageTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, tableViewHeaderViewHeight)];
+        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, tableViewHeaderViewHeight)];
         [_headerView addBorderWithColor:[UIColor lightGrayColor] width:0.5 boderType:UIViewBorderTypeTop];
     }
     
@@ -157,6 +168,24 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
     }
    
     return _dropDownMenu;
+}
+
+- (FMTHomePageFilterCollectionViewController *)filterCollectionViewController
+{
+    if (!_filterCollectionViewController) {
+        _filterCollectionViewController = [[FMTHomePageFilterCollectionViewController alloc] init];
+    }
+    
+    return _filterCollectionViewController;
+}
+
+- (FMTHomePageRecommendViewController *)recommendViewController
+{
+    if (!_recommendViewController) {
+        _recommendViewController = [[FMTHomePageRecommendViewController alloc] init];
+    }
+    
+    return _recommendViewController;
 }
 
 #pragma mark - UITableviewDelegate
@@ -244,6 +273,16 @@ static const NSUInteger tableViewHeaderViewHeight = 480.;
         // 拿到当前的下拉刷新控件，结束刷新状态
         [self.tableView.mj_header endRefreshing];
     });
+}
+
+- (void)configTableViewHeaderView {
+    [self.filterCollectionViewController configFilterViewPositionY:0 height:FilterCollectionViewHeight];
+    [self.headerView addSubview:self.filterCollectionViewController.view];
+    [self addChildViewController:self.filterCollectionViewController];
+    
+    [self.recommendViewController configRecommendViewPositionY:FilterCollectionViewHeight + 20. height:RecommendViewHeight];
+    [self.headerView addSubview:self.recommendViewController.view];
+    [self addChildViewController:self.recommendViewController];
 }
 
 - (void)configTableViewHeaderAndFooter

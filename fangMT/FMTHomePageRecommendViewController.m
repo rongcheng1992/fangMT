@@ -14,7 +14,7 @@
 @interface FMTHomePageRecommendViewController ()
 
 @property (nonatomic, strong) FMTHomePageRecommendViewModel *viewModel;
-@property (nonatomic, strong) NSMutableArray *recommendInfoArray;
+@property (nonatomic, strong) NSMutableArray<FMTHomePageRecommendModel *> *recommendInfoArray;
 
 @end
 
@@ -39,8 +39,11 @@
                                        }];
     
     [self mockData];
-    
     [self configRecommendView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
 }
 
 #pragma mark - getter

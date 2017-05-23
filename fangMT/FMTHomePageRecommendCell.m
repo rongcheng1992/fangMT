@@ -42,9 +42,10 @@
     
     // 更新约束
     if (self.isPositonMiddle) {
-        [self.desLabel mas_remakeConstraints:^(MASConstraintMaker *make){
-            make.height.mas_equalTo(0.01);
-        }];
+        self.desLabel.hidden = YES;
+//        [self.desLabel mas_remakeConstraints:^(MASConstraintMaker *make){
+//            make.height.mas_equalTo(0.01);
+//        }];
         
         [self.imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.subTitleLabel.mas_bottom).offset(5.);

@@ -21,7 +21,6 @@
 		E78AFCAA1EBAD61A00A58889 /* FMTMerchantInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCA91EBAD61A00A58889 /* FMTMerchantInfoModel.m */; };
 		E78AFCAD1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */; };
 		E78AFCB01EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */; };
-		E78AFCB51EBBF00400A58889 /* FMTHomePageTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E78AFCB41EBBF00400A58889 /* FMTHomePageTableHeaderView.m */; };
 		E7CA8F3C1EB9C31A008302A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3B1EB9C31A008302A7 /* main.m */; };
 		E7CA8F3F1EB9C31A008302A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */; };
 		E7CA8F421EB9C31A008302A7 /* FMTHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */; };
@@ -80,8 +79,6 @@
 		E78AFCAC1EBAD63F00A58889 /* FMTMerchantInfoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTMerchantInfoListViewModel.m; sourceTree = "<group>"; };
 		E78AFCAE1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTMerchantInfoListTableViewCell.h; sourceTree = "<group>"; };
 		E78AFCAF1EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTMerchantInfoListTableViewCell.m; sourceTree = "<group>"; };
-		E78AFCB31EBBF00400A58889 /* FMTHomePageTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTHomePageTableHeaderView.h; sourceTree = "<group>"; };
-		E78AFCB41EBBF00400A58889 /* FMTHomePageTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTHomePageTableHeaderView.m; sourceTree = "<group>"; };
 		E7AB3E771EBC891F0028D948 /* CommonHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonHeader.pch; path = ../CommonHeader.pch; sourceTree = "<group>"; };
 		E7CA8F371EB9C31A008302A7 /* fangMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fangMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CA8F3B1EB9C31A008302A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -176,8 +173,6 @@
 				E7CA8F3E1EB9C31A008302A7 /* AppDelegate.m */,
 				E7CA8F401EB9C31A008302A7 /* FMTHomePageViewController.h */,
 				E7CA8F411EB9C31A008302A7 /* FMTHomePageViewController.m */,
-				E78AFCB31EBBF00400A58889 /* FMTHomePageTableHeaderView.h */,
-				E78AFCB41EBBF00400A58889 /* FMTHomePageTableHeaderView.m */,
 				E759DD671EC228B700C4F2EE /* FMTHomePageRecommendViewController.h */,
 				E759DD681EC228B700C4F2EE /* FMTHomePageRecommendViewController.m */,
 				E759DD6B1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.h */,
@@ -432,7 +427,6 @@
 				E7F5673B1EC1458300AB78EC /* DOPDropDownMenu1.m in Sources */,
 				E78AFCB01EBAD9A500A58889 /* FMTMerchantInfoListTableViewCell.m in Sources */,
 				E759DD651EC2233800C4F2EE /* FMTHomePageFilterCollectionViewController.m in Sources */,
-				E78AFCB51EBBF00400A58889 /* FMTHomePageTableHeaderView.m in Sources */,
 				E759DD6D1EC2295200C4F2EE /* FMTHomePageRecommendViewModel.m in Sources */,
 				E7CA8F421EB9C31A008302A7 /* FMTHomePageViewController.m in Sources */,
 				E71F73F41EBEFC6900947704 /* FMTHomePageFilterCollectionCell.m in Sources */,

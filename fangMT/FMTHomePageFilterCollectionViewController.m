@@ -10,6 +10,7 @@
 #import "FMTHomePageFilterCollectionCell.h"
 #import "FMTHomePageFilterCollectionViewModel.h"
 #import "FMTHomePageFilterCollectionModel.h"
+#import "FMTMerchantDetailViewController.h"
 
 static NSString *const kCollectionViewCellIdentifier = @"kCollectionViewCellIdentifier";
 
@@ -86,6 +87,9 @@ static NSString *const kCollectionViewCellIdentifier = @"kCollectionViewCellIden
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    // TODO: the following code just for test
+    FMTMerchantDetailViewController *vc  = [[FMTMerchantDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     NSLog(@"collectionView--%ld--%ld", (long)indexPath.section,(long)indexPath.row);
 }
 
